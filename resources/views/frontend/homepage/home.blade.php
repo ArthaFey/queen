@@ -21,9 +21,9 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
-                <a href="index.html" class="hover:text-orange-500 transition-colors">BERANDA</a>
+                <a href="{{ route('frontend.home') }}" class="hover:text-orange-500 transition-colors">BERANDA</a>
 
-                <!-- Tentang Kami Desktop -->
+                {{-- <!-- Tentang Kami Desktop -->
                 <div class="relative group">
                     <button class="hover:text-orange-500 flex items-center gap-1 transition-colors">
                         TENTANG KAMI
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
+                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a> --}}
             </nav>
 
             <!-- Burger Menu (Mobile) -->
@@ -63,10 +63,10 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-sm font-semibold bg-white border-t">
-            <a href="index.html" class="block text-gray-700 hover:text-orange-500 py-2 transition-colors">BERANDA</a>
+            <a href="{{ route('frontend.home') }}" class="block text-gray-700 hover:text-orange-500 py-2 transition-colors">BERANDA</a>
 
             <!-- Tentang Kami Mobile -->
-            <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
+            {{-- <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
                 TENTANG KAMI
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
@@ -87,7 +87,7 @@
                 <a href="detail_kuliahln_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
             </div>
 
-            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
+            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a> --}}
         </div>
     </header>
 
@@ -293,7 +293,7 @@
             <h2 class="text-4xl font-bold text-center mb-16">PROGRAM STUDY</h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" 
+                    <img src="image/homepage/program/gambar2.jpeg" 
                          alt="Kapal Pesiar" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Kapal Pesiar</h3>
@@ -302,7 +302,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=250&fit=crop" 
+                    <img src="image/homepage/program/gambar1.jpeg" 
                          alt="Kuliah Keluar Negeri" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Kuliah Keluar Negeri</h3>
@@ -311,7 +311,7 @@
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" 
+                    <img src="image/homepage/banner/banner3.jpg" 
                          alt="Perhotelan" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Perhotelan</h3>
@@ -392,6 +392,8 @@
             <h2 class="text-4xl font-bold text-center mb-16">TESTIMONI</h2>
             <div class="overflow-hidden max-w-6xl mx-auto">
                 <div class="flex slide-animation space-x-6">
+                    
+                    
                     <div class="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 border">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
@@ -402,6 +404,8 @@
                         </div>
                         <p class="text-gray-600 text-sm">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
+                   
+                   
                     <div class="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 border">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
@@ -522,8 +526,8 @@
                     <h3 class="text-lg font-semibold mb-6 text-orange-500">Menu</h3>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Beranda</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Program</a></li>
+                        {{-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Program</a></li> --}}
                     </ul>
                 </div>
                 <div>
