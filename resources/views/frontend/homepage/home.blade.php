@@ -3,50 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.">
     <title>Queen International Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/homepage/styles.css">
+    <link rel="icon" href="image/homepage/icon.png">
+
 </head>
 <body class="font-poppins overflow-x-hidden">
    
-  <header class="bg-white shadow fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div>
-        <img src="image/homepage/PULPEN.png" alt="Logo Queen" class="h-14 sm:h-16 w-auto">
-      </div>
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700 relative">
-        <a href="#" class="hover:text-orange-500">BERANDA</a>
+     <header class="shadow relative">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="image/homepage/PULPEN.png" alt="Logo" class="max-h-14 w-auto object-contain" />
+            </div>
 
-        <div class="group relative">
-          <button class="hover:text-orange-500 flex items-center gap-1 transition duration-200">
-            TENTANG KAMI
-            <svg class="w-3 h-3 fill-current mt-[2px]" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
-          </button>
-          <div class="absolute left-0 top-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transform transition-all duration-200 ease-in-out bg-white rounded-lg shadow-lg w-44 py-2 z-50">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Profile</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Preparation Class</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Fasilitas</a>
-          </div>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
+                <a href="index.html" class="hover:text-orange-500 transition-colors">BERANDA</a>
+
+                <!-- Tentang Kami Desktop -->
+                <div class="relative group">
+                    <button class="hover:text-orange-500 flex items-center gap-1 transition-colors">
+                        TENTANG KAMI
+                        <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
+                    </button>
+                    <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
+                        <a href="about us_profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
+                    </div>
+                </div>
+
+                <!-- Program Desktop -->
+                <div class="relative group">
+                    <button class="hover:text-orange-500 flex items-center gap-1 transition-colors">
+                        PROGRAM
+                        <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
+                    </button>
+                    <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
+                        <a href="detail_mahasiswa_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Mahasiswa Baru</a>
+                        <a href="detail_kapalpesiar_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kapal Pesiar</a>
+                        <a href="detail_kuliahln_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kuliah Luar Negeri</a>
+                    </div>
+                </div>
+
+                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
+            </nav>
+
+            <!-- Burger Menu (Mobile) -->
+            <button id="burger-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </div>
 
-        <div class="group relative">
-          <button class="hover:text-orange-500 flex items-center gap-1 transition duration-200">
-            PROGRAM
-            <svg class="w-3 h-3 fill-current mt-[2px]" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
-          </button>
-          <div class="absolute left-0 top-8 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transform transition-all duration-200 ease-in-out bg-white rounded-lg shadow-lg w-44 py-2 z-50">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Mahasiswa Baru</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Kapal Pesiar</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 transition">Kuliah Luar Negeri</a>
-          </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-2 text-sm font-semibold bg-white border-t">
+            <a href="index.html" class="block text-gray-700 hover:text-orange-500 py-2 transition-colors">BERANDA</a>
+
+            <!-- Tentang Kami Mobile -->
+            <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
+                TENTANG KAMI
+                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div id="subTentangKami" class="hidden pl-4 space-y-1 text-sm">
+                <a href="about us_profile.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
+                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a>
+                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
+            </div>
+
+            <!-- Program Mobile -->
+            <button onclick="toggleSubMenu('subProgram')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
+                PROGRAM
+                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div id="subProgram" class="hidden pl-4 space-y-1 text-sm">
+                <a href="detail_mahasiswa_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Mahasiswa Baru</a>
+                <a href="detail_kapalpesiar_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kapal Pesiar</a>
+                <a href="detail_kuliahln_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
+            </div>
+
+            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
         </div>
-        <a href="#" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm">
-          Daftar Sekarang
-        </a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
 
 
@@ -60,7 +103,7 @@
         <!-- Content Overlay -->
         <div class="relative z-10 h-full flex items-center">
             <div class="container mx-auto px-6">
-                <div class="max-w-xl">
+                <div class="max-w-xl lg:ml-32">
                     <h1 class="text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
                         Selamat Datang<br>
                         <span class="text-orange-500">Queen</span>
@@ -92,12 +135,14 @@
 
     <!-- Kegiatan Queen Section -->
     <section class="py-20 bg-white relative">
-        <!-- Background Building Image -->
+   
+
         <div class="absolute inset-0">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop" 
                  alt="Building Background" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
+
         
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-4xl font-bold text-center mb-4 text-white">
@@ -106,28 +151,18 @@
             <p class="text-center text-white mb-16 opacity-90">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
             
             <!-- Three Cards with Transparent Background -->
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-3 max-w-6xl mx-auto">
+                
                 <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20">
-                    <div class="h-32 bg-gray-200 bg-opacity-50"></div>
+                    <div class="h-52 bg-gray-200 bg-opacity-50">
+                         <img src="../image/homepage/activity/gambar.jpg" alt="Building Background" class="w-full h-full object-cover">
+                    </div>
                     <div class="p-6">
                         <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
                         <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
-                <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20">
-                    <div class="h-32 bg-gray-200 bg-opacity-50"></div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Seminar Bisnis</h3>
-                        <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20">
-                    <div class="h-32 bg-gray-200 bg-opacity-50"></div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Pelatihan Skill</h3>
-                        <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -152,13 +187,14 @@
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="md:flex">
-                    <div class="md:w-1/3 p-8 flex items-center justify-center bg-gray-100">
+                    <div class="md:w-1/3 p-0 flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" 
-                             alt="Founder" class="w-48 h-48 rounded object-cover">
+                             alt="Founder" class="w-full rounded object-cover">
                     </div>
                     <div class="md:w-2/3 p-8">
                         <h3 class="text-2xl font-bold mb-6">
-                            Message From Founder <span class="text-orange-500">Queen International Bali</span>
+                            Message From Founder <br>
+                            <span class="text-orange-500">Queen International Bali</span>
                         </h3>
                         <p class="text-gray-700 leading-relaxed text-sm">
                             Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.
@@ -170,12 +206,12 @@
     </section>
 
 
-    <!-- Partner and Clinet -->
+    <!-- Partner -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="md:flex items-center max-w-6xl mx-auto">
                 <div class="md:w-1/3 mb-8 md:mb-0 pr-8">
-                    <h2 class="text-3xl font-bold mb-6">Partner And Client</h2>
+                    <h2 class="text-3xl font-bold mb-6">Partner</h2>
                     <p class="text-gray-600 text-sm leading-relaxed">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </p>
@@ -183,55 +219,46 @@
                 <div class="md:w-2/3">
                     <div class="overflow-hidden relative">
                         <div class="flex partner-slide items-center" id="partnerSlider">
-                            <div class="flex-shrink-0 w-24 h-16 bg-blue-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-blue-500 font-bold text-xs">PARTNER 1</span>
+                            
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn1.jpg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-gray-500 text-xs">CERT</span>
+                          
+                           <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn2.png" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-green-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-green-500 font-bold text-xs">PARTNER 2</span>
+                            
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn3.jpg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-yellow-600 text-xs">CERT</span>
+
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn4.jpg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-purple-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-purple-500 font-bold text-xs">PARTNER 3</span>
+
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn5.png" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-red-500 text-xs">CERT</span>
+
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn6.jpeg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-indigo-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-indigo-500 font-bold text-xs">PARTNER 4</span>
+                            
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn7.jpg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-pink-500 text-xs">CERT</span>
+
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn8.jpg" class="h-20" alt="">
                             </div>
-                            <!-- Duplicate for seamless loop -->
-                            <div class="flex-shrink-0 w-24 h-16 bg-blue-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-blue-500 font-bold text-xs">PARTNER 1</span>
+
+                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                <img src="image/homepage/partner/pn9.jpg" class="h-20" alt="">
                             </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-gray-500 text-xs">CERT</span>
-                            </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-green-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-green-500 font-bold text-xs">PARTNER 2</span>
-                            </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-yellow-600 text-xs">CERT</span>
-                            </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-purple-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-purple-500 font-bold text-xs">PARTNER 3</span>
-                            </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-red-500 text-xs">CERT</span>
-                            </div>
-                            <div class="flex-shrink-0 w-24 h-16 bg-indigo-100 rounded flex items-center justify-center mx-4">
-                                <span class="text-indigo-500 font-bold text-xs">PARTNER 4</span>
-                            </div>
-                            <div class="flex-shrink-0 w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center mx-4">
-                                <span class="text-pink-500 text-xs">CERT</span>
-                            </div>
+
+            
+                           
+                            
                         </div>
                     </div>
                 </div>
@@ -315,62 +342,38 @@
                         <div class="grid grid-cols-3 gap-2 h-full overflow-hidden">
                             <div class="facility-slide-up">
                                 <div class="facility-column space-y-2">
-                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=100&fit=crop" 
+                                    <img src="image/homepage/fasilitas/gambar1.jpg" 
                                          alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=150&h=100&fit=crop" 
-                                         alt="Meeting Room" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=150&h=100&fit=crop" 
-                                         alt="Library" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=150&h=100&fit=crop" 
-                                         alt="Conference Room" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=100&fit=crop" 
+                                    <img src="image/homepage/fasilitas/gambar2.jpg" 
                                          alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=150&h=100&fit=crop" 
-                                         alt="Meeting Room" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=150&h=100&fit=crop" 
-                                         alt="Library" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=150&h=100&fit=crop" 
-                                         alt="Conference Room" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar3.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar4.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
                                 </div>
                             </div>
                             <div class="facility-slide-down">
                                 <div class="facility-column space-y-2">
-                                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=150&h=100&fit=crop" 
-                                         alt="Classroom" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=150&h=100&fit=crop" 
-                                         alt="Lab" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop" 
-                                         alt="Cafeteria" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=100&fit=crop" 
-                                         alt="Study Hall" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=150&h=100&fit=crop" 
-                                         alt="Classroom" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=150&h=100&fit=crop" 
-                                         alt="Lab" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=100&fit=crop" 
-                                         alt="Cafeteria" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=150&h=100&fit=crop" 
-                                         alt="Study Hall" class="rounded w-full h-20 object-cover">
+                                   <img src="image/homepage/fasilitas/gambar5.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar6.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar7.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar8.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
                                 </div>
                             </div>
                             <div class="facility-slide-up">
                                 <div class="facility-column space-y-2">
-                                    <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=150&h=100&fit=crop" 
-                                         alt="Lounge" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=150&h=100&fit=crop" 
-                                         alt="Study Area" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=150&h=100&fit=crop" 
-                                         alt="Tech Room" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=150&h=100&fit=crop" 
-                                         alt="Recreation Area" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f93e586?w=150&h=100&fit=crop" 
-                                         alt="Lounge" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=150&h=100&fit=crop" 
-                                         alt="Study Area" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=150&h=100&fit=crop" 
-                                         alt="Tech Room" class="rounded w-full h-20 object-cover">
-                                    <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?w=150&h=100&fit=crop" 
-                                         alt="Recreation Area" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar9.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar10.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar11.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar12.jpg" 
+                                         alt="Office" class="rounded w-full h-20 object-cover">
                                 </div>
                             </div>
                         </div>
@@ -451,8 +454,8 @@
     <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-6xl mx-auto">
-                <div class="md:flex">
-                    <div class="md:w-1/3 p-8 bg-gray-50">
+                <div class="md:flex md:items-center">
+                    <div class="md:w-1/3 p-8">
                         <h2 class="text-3xl font-bold text-orange-500 mb-6">Our Sosmed!</h2>
                         
                         <div class="mt-8 space-y-3">
@@ -482,11 +485,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="md:w-2/3 p-8 bg-white">
-                        <div class="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <div class="md:w-2/3  p-8 bg-white">
+                        <div class="h-auto bg-gray-100 rounded-lg flex items-center justify-center">
                             <div class="text-center text-gray-400">
-                                <div class="text-6xl mb-4">📱</div>
-                                <p class="text-lg">Social Media Content Area</p>
+                                <img src="image/homepage/brosur/brosur1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -506,7 +508,7 @@
                 <div>
                     <div class="flex items-center mb-6">
                         <div class=" rounded flex items-center justify-center mr-3 -mt-5">
-                            <img src="images/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
+                            <img src="image/homepage/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
                         </div>
                         
                     </div>
@@ -532,16 +534,30 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2025 Queen.com All Rights Reserved Design by INDO APPS SOLUSIINDO</p>
+                <p class="text-gray-400 text-sm">© 2025 queenbali.com All Rights Reserved Design by  <a href="https://www.indoapps.id/" style="text-decoration:underline; color:rgb(0, 119, 255);">Indoapps Solusindo</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- CSS Styles -->
+
+   
+
     
 
     <!-- JavaScript for Enhanced Navbar -->
-    <script>
+     <script>
+        const burgerBtn = document.getElementById('burger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleSubMenu(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+
         // Add scroll effect to navbar
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
@@ -552,40 +568,36 @@
             }
         });
 
-    
         // Banner Data
-        const bannerImages = [
+       const bannerImages = [
             {
-                src: 'images/IMG_1037.png',
+                src: 'image/homepage/banner/banner1.jpg',
                 alt: 'Classroom Background'
-            },
+            }, 
             {
-                src: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=600&fit=crop',
-                alt: 'University Campus'
-            },
+                src: 'image/homepage/banner/banner2.png',
+                alt: 'Classroom Background'
+            }, 
             {
-                src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=600&fit=crop',
-                alt: 'Modern Library'
-            },
+                src: 'image/homepage/banner/banner3.jpg',
+                alt: 'Classroom Background'
+            }, 
             {
-                src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop',
-                alt: 'Cruise Ship'
-            },
+                src: 'image/homepage/banner/banner4.jpg',
+                alt: 'Classroom Background'
+            }, 
             {
-                src: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&h=600&fit=crop',
-                alt: 'Hotel Lobby'
-            }
+                src: 'image/homepage/banner/banner5.jpg',
+                alt: 'Classroom Background'
+            }, 
         ];
 
         // Certificate Data
         const certificateData = [
-            { title: 'Certificate 1', color: 'bg-gray-300', name: 'John Doe' },
-            { title: 'Certificate 2', color: 'bg-blue-300', name: 'Jane Smith' },
-            { title: 'Main Certificate', color: 'bg-gradient-to-br from-red-500 to-yellow-500', name: 'Oliva Wilson', isMain: true },
-            { title: 'Certificate 4', color: 'bg-green-300', name: 'Mike Johnson' },
-            { title: 'Certificate 5', color: 'bg-purple-300', name: 'Sarah Davis' },
-            { title: 'Certificate 6', color: 'bg-pink-300', name: 'Alex Brown' },
-            { title: 'Certificate 7', color: 'bg-indigo-300', name: 'Emma Wilson' }
+            {
+                name: "Sertifikat1",
+                image: "sertifikat.jpg"
+            },
         ];
 
         // Global variables
@@ -754,35 +766,30 @@
                 // Style based on position
                 if (index === 2) { // Center item
                     item.className = 'certificate-item certificate-center flex-shrink-0 transition-all duration-500 ease-in-out';
-                    
-                    if (currentData.isMain) {
+                
                         item.innerHTML = `
                             <div class="w-64 h-48 md:w-72 md:h-52 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-2">
                                 <div class="text-center text-white">
-                                    <div class="text-sm font-bold mb-2">SERTIFIKAT</div>
-                                    <div class="text-xs">${currentData.name}</div>
-                                    <div class="w-8 h-8 bg-yellow-400 rounded-full mx-auto mt-2"></div>
+                                     <img src="image/homepage/sertifikat/${currentData.image}" alt="">
                                 </div>
                             </div>
                         `;
-                    } else {
+                  
                         item.innerHTML = `
-                            <div class="w-64 h-48 md:w-72 md:h-52 ${currentData.color} rounded-lg shadow-xl flex items-center justify-center mx-2">
+                            <div class="w-64 h-48 md:w-72 md:h-52  rounded-lg shadow-xl flex items-center justify-center mx-2">
                                 <div class="text-center text-white">
-                                    <div class="text-sm font-bold mb-2">${currentData.title}</div>
-                                    <div class="text-xs">${currentData.name}</div>
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="">
                                 </div>
                             </div>
                         `;
-                    }
+                    
                 } else { // Side items
                     item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out';
-                    
-                    const sideColor = currentData.color.includes('gradient') ? 'bg-gray-300' : currentData.color;
+                
                     item.innerHTML = `
-                        <div class="w-48 h-36 md:w-56 md:h-40 ${sideColor} rounded-lg shadow-lg flex items-center justify-center mx-2">
+                        <div class="w-48 h-36 md:w-56 md:h-40  rounded-lg shadow-lg flex items-center justify-center mx-2">
                             <div class="text-center text-gray-600">
-                                <div class="text-xs font-semibold">${currentData.title}</div>
+                                  <img src="image/homepage/sertifikat/${currentData.image}" alt="">
                             </div>
                         </div>
                     `;
