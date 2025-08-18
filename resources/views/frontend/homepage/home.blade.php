@@ -23,7 +23,7 @@
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
                 <a href="{{ route('frontend.home') }}" class="hover:text-orange-500 transition-colors">BERANDA</a>
 
-                {{-- <!-- Tentang Kami Desktop -->
+                <!-- Tentang Kami Desktop -->
                 <div class="relative group">
                     <button class="hover:text-orange-500 flex items-center gap-1 transition-colors">
                         TENTANG KAMI
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a> --}}
+                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
             </nav>
 
             <!-- Burger Menu (Mobile) -->
@@ -66,7 +66,7 @@
             <a href="{{ route('frontend.home') }}" class="block text-gray-700 hover:text-orange-500 py-2 transition-colors">BERANDA</a>
 
             <!-- Tentang Kami Mobile -->
-            {{-- <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
+            <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
                 TENTANG KAMI
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
@@ -87,7 +87,7 @@
                 <a href="detail_kuliahln_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
             </div>
 
-            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a> --}}
+            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
         </div>
     </header>
 

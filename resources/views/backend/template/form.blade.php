@@ -1,7 +1,9 @@
 <div class="container">
 
 
-<div class="card card-primary card-outline mb-4">
+  
+// Form 
+<div class="card card-waring card-outline mb-4">
                   <!--begin::Header-->
                   <div class="card-header"><div class="card-title">Quick Example</div></div>
                   <!--end::Header-->
@@ -45,6 +47,9 @@
 </div>
 
 
+
+
+//Button
 <div class="">
       <button type="submit" class="btn btn-danger">Submit</button>
         <button type="submit" class="btn btn-success">Submit</button>
