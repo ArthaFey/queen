@@ -16,7 +16,7 @@
      <header class="shadow relative">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="image/homepage/PULPEN.png" alt="Logo" class="max-h-14 w-auto object-contain" />
+                <img src="image/homepage/PULPEN.png" alt="Logo" class="h-16 w-auto md:h-20" />
             </div>
 
             <!-- Desktop Nav -->
@@ -127,6 +127,23 @@
     </section>
 
 
+    <!-- Sertifikat -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">CERTIFICATE and ACHIEVEMENT</h2>
+            <div class="flex items-center justify-center max-w-6xl mx-auto" id="certificateSection">
+                <button id="prevCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-4 z-10">‹</button>
+                <div class="flex-1 overflow-hidden">
+                    <div class="flex items-center justify-center transition-transform duration-500 ease-in-out" id="certificateSlider">
+                        <!-- Certificates will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button id="nextCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-4 z-10">›</button>
+            </div>
+        </div>
+    </section>
+
+
 
 
     <!-- Spacing Section -->
@@ -134,38 +151,203 @@
 
 
     <!-- Kegiatan Queen Section -->
-    <section class="py-20 bg-white relative">
    
-
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop" 
-                 alt="Building Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-        </div>
-
+<section class="py-20 bg-white relative">
+    <!-- Background image & overlay -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop"
+             alt="Queen Background"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+        <h2 class="text-4xl font-bold text-center mb-4 text-white">
+            Kegiatan <span class="text-orange-500">Queen</span>
+        </h2>
         
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-4 text-white">
-                Kegiatan <span class="text-orange-500">Queen</span>
-            </h2>
-            <p class="text-center text-white mb-16 opacity-90">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-            
-            <!-- Three Cards with Transparent Background -->
-            <div class="grid md:grid-cols-3 gap-3 max-w-6xl mx-auto">
-                
-                <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20">
-                    <div class="h-52 bg-gray-200 bg-opacity-50">
-                         <img src="../image/homepage/activity/gambar.jpg" alt="Building Background" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                        <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+        
+    
+<div class="activities-slider-container relative max-w-5xl mx-auto overflow-visible">
+    <!-- Tombol kiri -->
+    <button onclick="previousSlide()" class="activity-nav-btn absolute -left-10 md:-left-14 top-1/2 -translate-y-1/2 z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+        </svg>
+    </button>
+    <!-- Slides -->
+    <div class="overflow-hidden">
+        <div class="slide active">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
                 </div>
 
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+                <!-- ...dst... -->
             </div>
         </div>
-    </section>
+
+        <div class="slide active">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 12.</p>
+                </div>
+                <!-- ...dst... -->
+            </div>
+        </div>
+        <div class="slide active">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 1.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                    <img src="image/activity/gambar.png" alt="Kegiatan 1" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="font-semibold text-lg mb-2">Kegiatan 1</h3>
+                    <p class="text-gray-500 text-sm">Deskripsi kegiatan 18.</p>
+                </div>
+                <!-- ...dst... -->
+            </div>
+        </div>
+
+        <!-- Slide berikutnya jika ada -->
+    </div>
+    <!-- Tombol kanan -->
+    <button onclick="nextSlide()" class="activity-nav-btn absolute -right-10 md:-right-14 top-1/2 -translate-y-1/2 z-10">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+    </button>
+    <!-- Indikator -->
+    <div class="flex justify-center items-center mt-8 space-x-2">
+        <span class="activity-slide-indicator w-3 h-3 rounded-full bg-indigo-600 cursor-pointer" onclick="goToSlide(0)"></span>
+        <span class="activity-slide-indicator w-3 h-3 rounded-full bg-indigo-300 cursor-pointer" onclick="goToSlide(1)"></span>
+        <span class="activity-slide-indicator w-3 h-3 rounded-full bg-indigo-300 cursor-pointer" onclick="goToSlide(2)"></span>
+    </div>
+</div>
+
+
+    </div>
+</section>
+
+    
+<script>
+let kegiatanCurrent = 0;
+let kegiatanSlides, kegiatanIndicators;
+
+function showKegiatanSlide(idx) {
+    kegiatanSlides = document.querySelectorAll('.slide');
+    kegiatanIndicators = document.querySelectorAll('.activity-slide-indicator');
+    if (!kegiatanSlides.length) return;
+    if (idx < 0) idx = kegiatanSlides.length - 1;
+    if (idx >= kegiatanSlides.length) idx = 0;
+    kegiatanSlides.forEach((slide, i) => {
+        slide.style.display = i === idx ? 'block' : 'none';
+        slide.classList.toggle('active', i === idx);
+    });
+    kegiatanIndicators.forEach((ind, i) => {
+        ind.classList.toggle('bg-indigo-600', i === idx);
+        ind.classList.toggle('bg-indigo-300', i !== idx);
+    });
+    kegiatanCurrent = idx;
+}
+function previousSlide() { showKegiatanSlide(kegiatanCurrent - 1); }
+function nextSlide() { showKegiatanSlide(kegiatanCurrent + 1); }
+function goToSlide(idx) { showKegiatanSlide(idx); }
+
+document.addEventListener('DOMContentLoaded', function() {
+    showKegiatanSlide(0);
+});
+</script>
+
 
 
 
@@ -269,21 +451,7 @@
 
 
 
-    <!-- Sertifikat -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">CERTIFICATE</h2>
-            <div class="flex items-center justify-center max-w-6xl mx-auto" id="certificateSection">
-                <button id="prevCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-4 z-10">‹</button>
-                <div class="flex-1 overflow-hidden">
-                    <div class="flex items-center justify-center transition-transform duration-500 ease-in-out" id="certificateSlider">
-                        <!-- Certificates will be dynamically inserted here -->
-                    </div>
-                </div>
-                <button id="nextCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-4 z-10">›</button>
-            </div>
-        </div>
-    </section>
+    
 
 
 
@@ -326,54 +494,102 @@
 
 
     <!-- Fasilitas -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">FASILITAS</h2>
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-6xl mx-auto">
-                <div class="md:flex h-96">
-                    <div class="md:w-1/2 p-8 flex items-center relative" 
-                         style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=400&fit=crop')">
-                        <div class="text-white">
-                            <h3 class="text-3xl font-bold mb-4">Our Five Star Facilities</h3>
-                            <p class="text-gray-200">Fasilitas terbaik dengan standar internasional untuk mendukung proses pembelajaran yang optimal.</p>
-                        </div>
+<section class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container mx-auto px-1">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-bold mb-6 facility-title">FASILITAS</h2>
+        </div>
+        
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto">
+            <div class="lg:flex">
+                <!-- Left Content -->
+                <div class="lg:w-2/5 p-10 flex items-center relative" 
+                     style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=400&fit=crop')">
+                    <div class="text-white relative z-10">
+                        <h3 class="text-4xl font-bold mb-6 leading-tight">
+                            Our Five Star Facilities
+                        </h3>
+                        <p class="text-gray-200 text-lg leading-relaxed mb-8">
+                            Fasilitas terbaik dengan standar internasional untuk mendukung proses pembelajaran yang optimal.
+                        </p>
                     </div>
-                    <div class="md:w-1/2 p-4">
-                        <div class="grid grid-cols-3 gap-2 h-full overflow-hidden">
+                </div>
+                
+                <!-- Right Content - Enhanced height -->
+                <div class="lg:w-3/5 p-6">
+                    <div class="facility-container" style="height: 500px;"> <!-- Increased height -->
+                        <div class="grid grid-cols-3 gap-4 h-full">
+                            <!-- Column 1 - Slide Up -->
                             <div class="facility-slide-up">
-                                <div class="facility-column space-y-2">
+                                <div class="facility-column">
+                                    <!-- Duplicate images to make the column longer -->
                                     <img src="image/homepage/fasilitas/gambar1.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar2.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar3.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar4.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+
+                                    <img src="image/homepage/fasilitas/gambar1.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar2.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar3.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar4.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+
+                                    
                                 </div>
                             </div>
+                            
+                            <!-- Column 2 - Slide Down -->
                             <div class="facility-slide-down">
-                                <div class="facility-column space-y-2">
-                                   <img src="image/homepage/fasilitas/gambar5.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                <div class="facility-column">
+                                    <!-- Duplicate images to make the column longer -->
+                                    <img src="image/homepage/fasilitas/gambar5.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar6.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar7.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar8.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+
+                                    <img src="image/homepage/fasilitas/gambar5.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar6.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar7.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar8.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                 </div>
                             </div>
+                            
+                            <!-- Column 3 - Slide Up -->
                             <div class="facility-slide-up">
-                                <div class="facility-column space-y-2">
+                                <div class="facility-column">
+                                    <!-- Duplicate images to make the column longer -->
                                     <img src="image/homepage/fasilitas/gambar9.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar10.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar11.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                     <img src="image/homepage/fasilitas/gambar12.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    
+                                    <img src="image/homepage/fasilitas/gambar9.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar10.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar11.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
+                                    <img src="image/homepage/fasilitas/gambar12.jpg" 
+                                         alt="Office" class="rounded w-full h-40 object-cover">
                                 </div>
                             </div>
                         </div>
@@ -501,47 +717,63 @@
         </div>
     </section>
 
-
-
-
-
     <!-- Footer -->
-    <footer class="bg-black text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div>
-                    <div class="flex items-center mb-6">
-                        <div class=" rounded flex items-center justify-center mr-3 -mt-5">
-                            <img src="image/homepage/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
-                        </div>
-                        
+<footer class="bg-black text-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <!-- Logo & Alamat -->
+            <div class="md:col-span-3 flex flex-col items-center md:items-start">
+                <div class="flex items-center mb-6">
+                    <div class="rounded flex items-center justify-center mr-3 -mt-5">
+                        <img src="image/homepage/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Jl. Bypass Ngurah Rai, Danpesar Timur<br>
-                        Denpasar, Bali<br><br>
-                        Email: queen@international.com
-                    </p>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-orange-500">Menu</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Beranda</a></li>
-                        {{-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Program</a></li> --}}
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-orange-500">Maps</h3>
-                    <div class="bg-gray-800 rounded-lg h-32 flex items-center justify-center">
-                        <span class="text-gray-500 text-sm">📍 Google Maps Location</span>
-                    </div>
+                <!-- Alamat di bawah logo, deret ke samping di desktop -->
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 w-full justify-center md:justify-start">
+                    <!-- Alamat 1 -->
+                    <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                        <h4 class="font-bold mb-2 text-sm">ALAMAT 1 :</h4>
+                        <span class="font-semibold">EZZY Heritage</span><br>
+                        <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL GIANYAR</span><br>
+                        Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia<br>
+                        Telp. (0361) 945 887
+                    </a>
+                    <!-- Alamat 2 -->
+                    <a href="https://maps.google.com/?q=Jl. Hayam Wuruk, No. 226B, Denpasar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                        <h4 class="font-bold mb-2 text-sm">ALAMAT 2 :</h4>
+                        <span class="font-semibold">EZZY City</span><br>
+                        <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL DENPASAR</span><br>
+                        Jl. Hayam Wuruk, No. 226B, Denpasar, Bali - Indonesia<br>
+                        Telp. (0361) 230 110
+                    </a>
+                    <!-- Alamat 3 -->
+                    <a href="https://maps.google.com/?q=Jl. By Pass I Gusti Ngurah Rai, No.27e, Nusa Dua, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                        <h4 class="font-bold mb-2 text-sm">ALAMAT 3 :</h4>
+                        <span class="font-semibold">EZZY Autograph</span><br>
+                        <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL NUSA DUA</span><br>
+                        Jl. By Pass I Gusti Ngurah Rai, No.27e, Nusa Dua, Bali - Indonesia<br>
+                        Telp. (0361) 4772318
+                    </a>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-                <p class="text-gray-400 text-sm">© 2025 queenbali.com All Rights Reserved Design by  <a href="https://www.indoapps.id/" style="text-decoration:underline; color:rgb(0, 119, 255);">Indoapps Solusindo</a></p>
+            <!-- Maps di kanan -->
+            <div class="flex flex-col items-center md:items-end w-full">
+                <div class="relative w-full">
+                    <h3 class="text-lg font-semibold text-orange-500 text-center absolute top-0 left-1/2 transform -translate-x-1/2 z-20 w-full pointer-events-none">
+                        Maps
+                    </h3>
+                    <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank"
+                        class="block bg-gray-800 rounded-lg h-56 w-full md:w-64 flex items-center justify-center hover:bg-gray-700 transition overflow-hidden mt-8 relative">
+                        <img src="image/homepage/maps-preview.jpg" alt="Lokasi Kampus" class="object-cover w-full h-full" />
+                    </a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+            <p class="text-gray-400 text-sm">© 2025 queenbali.com All Rights Reserved Design by  <a href="https://www.indoapps.id/" style="text-decoration:underline; color:rgb(0, 119, 255);">Indoapps Solusindo</a></p>
+        </div>
+    </div>
+</footer>
 
 
    
@@ -615,6 +847,95 @@
             initializeBanner();
             initializeCertificateSlider();
             initializeScrollEffects();
+            const facilityImages = document.querySelectorAll('.facility-column img');
+            
+            facilityImages.forEach(img => {
+                img.addEventListener('mouseenter', function() {
+                    // Pause all animations when hovering over an image
+                    const columns = document.querySelectorAll('.facility-column');
+                    columns.forEach(column => {
+                        column.style.animationPlayState = 'paused';
+                    });
+                    
+                    // Add special hover effect
+                    this.style.transform = 'scale(1.1) rotate(2deg)';
+                    this.style.zIndex = '20';
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    // Resume animations
+                    const columns = document.querySelectorAll('.facility-column');
+                    columns.forEach(column => {
+                        column.style.animationPlayState = 'running';
+                    });
+                    
+                    // Reset hover effect
+                    this.style.transform = '';
+                    this.style.zIndex = '';
+                });
+                
+                // Add click effect
+                img.addEventListener('click', function() {
+                    // Create a temporary zoom effect
+                    this.style.transform = 'scale(1.15)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            // Observe facility section
+            const facilitySection = document.querySelector('section');
+            if (facilitySection) {
+                facilitySection.style.opacity = '0';
+                facilitySection.style.transform = 'translateY(50px)';
+                facilitySection.style.transition = 'all 0.8s ease-out';
+                observer.observe(facilitySection);
+            }
+            
+            // Performance optimization
+            let ticking = false;
+            
+            function updateAnimations() {
+                // Check if user prefers reduced motion
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    const animations = document.querySelectorAll('.facility-column');
+                    animations.forEach(animation => {
+                        animation.style.animation = 'none';
+                    });
+                }
+                ticking = false;
+            }
+            
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateAnimations);
+                    ticking = true;
+                }
+            }
+            
+            // Add error handling for images
+            facilityImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.style.backgroundColor = '#f3f4f6';
+                    this.style.display = 'flex';
+                    this.style.alignItems = 'center';
+                    this.style.justifyContent = 'center';
+                    this.innerHTML = '<span style="color: #9ca3af; font-size: 12px;">Image not available</span>';
+                });
+            });
         });
 
         // Banner Functions
@@ -967,7 +1288,8 @@
         function preloadCriticalImages() {
             const criticalImages = [
                 'images/IMG_1037.png',
-                'images/PULPEN.png',
+                'images/PULPEN.png',                /* Add this to your CSS file or inside a <style> tag */
+                
                 'images/LOGO FULL.png'
             ];
             
@@ -976,9 +1298,11 @@
                 img.src = src;
             });
         }
+        
 
         // Call preload function
         preloadCriticalImages();
+        (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ecd4039402f8fc',t:'MTc1NTEzNjUwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
     </script>
 </body>
 </html>
