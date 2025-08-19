@@ -147,21 +147,23 @@
     </section>
 
 
-    <!-- Sertifikat -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-16 text-orange-500">Certificate & Achivments </h2>
+    <!-- Sertifikat and achivment -->
+    <section class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-orange-500">Certificate & Achievements</h2>
             <div class="flex items-center justify-center max-w-6xl mx-auto" id="certificateSection">
-                <button id="prevCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-4 z-10">‹</button>
+                <button id="prevCert" class="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-2 md:mr-4 z-10 text-lg md:text-xl">‹</button>
                 <div class="flex-1 overflow-hidden">
                     <div class="flex items-center justify-center transition-transform duration-500 ease-in-out" id="certificateSlider">
                         <!-- Certificates will be dynamically inserted here -->
                     </div>
                 </div>
-                <button id="nextCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-4 z-10">›</button>
+                <button id="nextCert" class="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-2 md:ml-4 z-10 text-lg md:text-xl">›</button>
             </div>
         </div>
     </section>
+
+
 
 
 
@@ -1251,6 +1253,8 @@
 
         function updateCertificateSlider() {
             const certificateItems = document.querySelectorAll('.certificate-item');
+            const isMobile = window.innerWidth < 768;
+            const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
             
             certificateItems.forEach((item, index) => {
                 let dataIndex;
@@ -1270,36 +1274,57 @@
                 
                 const currentData = certificateData[dataIndex];
                 
-                // Style based on position
+                // Style based on position and screen size
                 if (index === 2) { // Center item
                     item.className = 'certificate-item certificate-center flex-shrink-0 transition-all duration-500 ease-in-out';
-                
-                        item.innerHTML = `
-                            <div class="w-64 h-48 md:w-72 md:h-52 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-2">
-                                <div class="text-center text-white">
-                                     <img src="image/homepage/sertifikat/${currentData.image}" alt="">
-                                </div>
-                            </div>
-                        `;
-                  
-                        item.innerHTML = `
-                            <div class="w-64 h-48 md:w-72 md:h-52  rounded-lg shadow-xl flex items-center justify-center mx-2">
-                                <div class="text-center text-white">
-                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="">
-                                </div>
-                            </div>
-                        `;
                     
-                } else { // Side items
-                    item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out';
-                
-                    item.innerHTML = `
-                        <div class="w-48 h-36 md:w-56 md:h-40  rounded-lg shadow-lg flex items-center justify-center mx-2">
-                            <div class="text-center text-gray-600">
-                                  <img src="image/homepage/sertifikat/${currentData.image}" alt="">
+                    if (isMobile) {
+                        item.innerHTML = `
+                            <div class="w-full max-w-[280px] bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-1">
+                                <div class="text-center text-white p-3">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[200px] object-contain rounded">
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    } else if (isTablet) {
+                        item.innerHTML = `
+                            <div class="w-60 h-44 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-2">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[160px] object-contain rounded">
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        item.innerHTML = `
+                            <div class="w-72 h-56 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-3">
+                                <div class="text-center text-white p-4">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-full object-contain rounded">
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else { // Side items
+                    if (isMobile) {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out hidden';
+                    } else if (isTablet) {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out opacity-50';
+                        item.innerHTML = `
+                            <div class="w-48 h-36 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg shadow-lg flex items-center justify-center mx-1">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[120px] object-contain rounded opacity-80">
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out opacity-60';
+                        item.innerHTML = `
+                            <div class="w-56 h-40 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg shadow-lg flex items-center justify-center mx-2">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-full object-contain rounded opacity-80">
+                                </div>
+                            </div>
+                        `;
+                    }
                 }
             });
         }
