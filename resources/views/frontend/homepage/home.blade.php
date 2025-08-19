@@ -6,22 +6,32 @@
     <meta name="description" content=" Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.">
     <title>Queen International Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Tambahkan Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/homepage/styles.css">
+    <link rel="stylesheet" href="../css/homepage/styles.css">
     <link rel="icon" href="image/homepage/icon.png">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
     <!-- AOS  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <style>
+          .swiper-pagination-bullet{
+            background-color: #f2924d !important;
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: #F97316 !important;
+        }
+
+    </style>
+
 </head>
-<body class="font-poppins overflow-x-hidden ">
+<body class=" overflow-x-hidden ">
    
     <header class="shadow relative">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -164,251 +174,244 @@
 
 
     <!-- Kegiatan Queen Section -->
-    <section class="py-20 bg-white relative">
-        <!-- Background image & overlay -->
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop"
-                alt="Queen Background"
-                class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-        </div>
+   <section class="py-20 bg-white relative">
+    <!-- Background image & overlay -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop"
+            alt="Queen Background"
+            class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl font-bold text-center mb-4 text-white">
-                Kegiatan <span class="text-orange-500">Queen</span>
-            </h2>
-            
-            <div class="activities-slider-container relative max-w-5xl mx-auto">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-white">
+            Kegiatan <span class="text-orange-500">Queen</span>
+        </h2>
+        
+        <div class="activities-slider-container relative max-w-6xl mx-auto">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
 
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="100">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="200">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar2.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="300">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar3.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="400">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar4.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="500">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar21.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop </h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="600">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar6.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <!-- Grid responsif -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+                            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="100">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="200">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="300">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="400">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="500">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="600">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                             <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                    
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar7.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar8.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar9.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar10.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar11.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar12.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-        
-                    </div>
-                </div>
-
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                    
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar13.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar14.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar15.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar16.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar17.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-
-                        <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
-                            <div class="h-52 bg-gray-200 bg-opacity-50">
-                                <img src="image/homepage/activity/gambar18.jpg" alt="Building Background" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                                <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            </div>
-                        </div>
-
-        
-                    </div>
-                </div>
-
-            </div>
                 <!-- Pagination -->
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination mt-6"></div>
             </div>
-            </div>
+        </div>
+    </div>
 
-        <!-- Tambahkan Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
         var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
+            spaceBetween: 20,
+            centeredSlides: false,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
@@ -418,18 +421,24 @@
                 clickable: true,
                 dynamicBullets: true,
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            });
-        </script>
-
-
-
-
-    </div>
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                },
+                1024: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+    </script>
     </section>
+
 
     
 
