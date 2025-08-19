@@ -1,11 +1,13 @@
 * {
-            font-family: 'Poppins', sans-serif !important;
+            /* font-family:  !important; */
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: "EB Garamond", serif;
             padding-top: 0px;
         }
+
+     
 
         /* Sticky Header Styles */
         header.scrolled {
@@ -129,7 +131,7 @@
         }
 
         .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-8px) scale(1.0);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
@@ -194,3 +196,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        .swiper-pagination-bullet{
+            background-color: #db752c !important;
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: #F97316 !important;
+        }
+
