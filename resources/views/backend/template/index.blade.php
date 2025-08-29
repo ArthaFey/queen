@@ -25,6 +25,9 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
+    <!--begin::SweetAlert Plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--end::Fonts-->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -42,7 +45,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="../dist/css/adminlte.css" />
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -482,6 +485,8 @@
       sparkline3.render();
     </script>
     <!--end::Script-->
+  
+    @yield('scripts')
   </body>
   <!--end::Body-->
 </html>
