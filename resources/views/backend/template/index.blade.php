@@ -25,6 +25,11 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
+
+    <!--begin::SweetAlert Plugin-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @yield('scripts')
+  
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -42,7 +47,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="../dist/css/adminlte.css" />
+    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">  <!--untuk file edit-->
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -144,7 +149,7 @@
               data-accordion="false">
              
               <li class="nav-item">
-                <a href="{{ route('banner') }}" class="nav-link">
+                <a href="{{ route('banners.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-palette"></i>
                   <p>Banner</p>
                 </a>
