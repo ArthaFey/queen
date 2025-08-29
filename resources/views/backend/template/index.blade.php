@@ -229,8 +229,6 @@
 
         @yield('content')
 
-
-
       </main>
       <!--end::App Main-->
 
