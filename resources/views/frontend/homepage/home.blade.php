@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.">
     <title>Queen International Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/homepage/styles.css">
+    <!-- Tambahkan Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../css/homepage/styles.css">
     <link rel="icon" href="image/homepage/icon.png">
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+          .swiper-pagination-bullet{
+            background-color: #f2924d !important;
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: #F97316 !important;
+        }
+
+    </style>
+
 </head>
-<body class="font-poppins overflow-x-hidden">
+<body class=" overflow-x-hidden ">
    
-     <header class="shadow relative">
+    <header class="shadow relative">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="image/homepage/PULPEN.png" alt="Logo" class="max-h-14 w-auto object-contain" />
+                <img src="image/homepage/PULPEN.png" alt="Logo" class="h-20 w-auto md:h-20" style="height: 100px;" />
             </div>
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
                 <a href="{{ route('frontend.home') }}" class="hover:text-orange-500 transition-colors">BERANDA</a>
 
-                {{-- <!-- Tentang Kami Desktop -->
+                <!-- Tentang Kami Desktop -->
                 <div class="relative group">
                     <button class="hover:text-orange-500 flex items-center gap-1 transition-colors">
                         TENTANG KAMI
                         <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
-                        <a href="about us_profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
+                        {{-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a> --}}
+                        {{-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a> --}}
+                        <a href="#fasilitas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
                     </div>
                 </div>
 
@@ -43,13 +63,13 @@
                         <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
-                        <a href="detail_mahasiswa_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Mahasiswa Baru</a>
-                        <a href="detail_kapalpesiar_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kapal Pesiar</a>
-                        <a href="detail_kuliahln_program.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kuliah Luar Negeri</a>
+                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Mahasiswa Baru</a>
+                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kapal Pesiar</a>
+                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kuliah Luar Negeri</a>
                     </div>
                 </div>
 
-                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a> --}}
+                {{-- <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a> --}}
             </nav>
 
             <!-- Burger Menu (Mobile) -->
@@ -66,14 +86,14 @@
             <a href="{{ route('frontend.home') }}" class="block text-gray-700 hover:text-orange-500 py-2 transition-colors">BERANDA</a>
 
             <!-- Tentang Kami Mobile -->
-            {{-- <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
+            <button onclick="toggleSubMenu('subTentangKami')" class="w-full text-left flex justify-between items-center text-gray-700 hover:text-orange-500 py-2 transition-colors">
                 TENTANG KAMI
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
             <div id="subTentangKami" class="hidden pl-4 space-y-1 text-sm">
-                <a href="about us_profile.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
-                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a>
-                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
+                {{-- <a href="about us_profile.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
+                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a> --}}
+                <a href="#fasilitas" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
             </div>
 
             <!-- Program Mobile -->
@@ -82,12 +102,12 @@
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
             <div id="subProgram" class="hidden pl-4 space-y-1 text-sm">
-                <a href="detail_mahasiswa_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Mahasiswa Baru</a>
-                <a href="detail_kapalpesiar_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kapal Pesiar</a>
-                <a href="detail_kuliahln_program.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
+                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Mahasiswa Baru</a>
+                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kapal Pesiar</a>
+                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
             </div>
 
-            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a> --}}
+            {{-- <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a> --}}
         </div>
     </header>
 
@@ -104,7 +124,7 @@
         <div class="relative z-10 h-full flex items-center">
             <div class="container mx-auto px-6">
                 <div class="max-w-xl lg:ml-32">
-                    <h1 class="text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                    <h1 class="ml-12 text-5xl lg:ml-0 lg:text-6xl font-bold text-white mb-4 leading-tight">
                         Selamat Datang<br>
                         <span class="text-orange-500">Queen</span>
                     </h1>
@@ -127,45 +147,304 @@
     </section>
 
 
+    <!-- Sertifikat and achivment -->
+    <section class="py-12 md:py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-16 text-orange-500">Certificate & Achievements</h2>
+            <div class="flex items-center justify-center max-w-6xl mx-auto" id="certificateSection">
+                <button id="prevCert" class="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-2 md:mr-4 z-10 text-lg md:text-xl">‹</button>
+                <div class="flex-1 overflow-hidden">
+                    <div class="flex items-center justify-center transition-transform duration-500 ease-in-out" id="certificateSlider">
+                        <!-- Certificates will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button id="nextCert" class="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-2 md:ml-4 z-10 text-lg md:text-xl">›</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
     <!-- Spacing Section -->
     <div class="py-2 bg-gradient-to-b from-gray-10 to-white"></div>
 
 
+
+
+
     <!-- Kegiatan Queen Section -->
-    <section class="py-20 bg-white relative">
-   
+   <section class="py-20 bg-white relative">
+    <!-- Background image & overlay -->
+    <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop"
+            alt="Queen Background"
+            class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    </div>
 
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=600&fit=crop" 
-                 alt="Building Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-        </div>
-
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 text-white">
+            Kegiatan <span class="text-orange-500">Queen</span>
+        </h2>
         
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-4xl font-bold text-center mb-4 text-white">
-                Kegiatan <span class="text-orange-500">Queen</span>
-            </h2>
-            <p class="text-center text-white mb-16 opacity-90">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-            
-            <!-- Three Cards with Transparent Background -->
-            <div class="grid md:grid-cols-3 gap-3 max-w-6xl mx-auto">
-                
-                <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20">
-                    <div class="h-52 bg-gray-200 bg-opacity-50">
-                         <img src="../image/homepage/activity/gambar.jpg" alt="Building Background" class="w-full h-full object-cover">
+        <div class="activities-slider-container relative max-w-6xl mx-auto">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <!-- Grid responsif -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="100">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="200">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="300">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="400">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="500">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up" data-aos-delay="600">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-lg font-semibold mb-3 text-gray-800">Workshop Teknologi</h3>
-                        <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                             <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar2.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar3.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+
+
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
+                                <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
+                                    <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 sm:p-6">
+                                    <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">Workshop Teknologi</h3>
+                                    <p class="text-gray-700 text-sm leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-6"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 20,
+            centeredSlides: false,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 1,
+                },
+                1024: {
+                    slidesPerView: 1,
+                },
+            }
+        });
+    </script>
     </section>
+
+
+    
+
+
 
 
 
@@ -173,8 +452,8 @@
  
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-orange-500">
-                KAMPUS RAMAH TAMAH DAN CRUISE LINE DI BALI!
+            <h2 class="text-5xl font-bold text-orange-500">
+               "Hospitality Management Campus"
             </h2>
         </div>
     </section>
@@ -182,28 +461,37 @@
 
 
 
-    <!-- Pesan dari Pemilik -->
+     <!-- Pesan dari Pemilik -->
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/3 p-0 flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face" 
+                        <img src="image/homepage/owner/owner.png" 
                              alt="Founder" class="w-full rounded object-cover">
                     </div>
                     <div class="md:w-2/3 p-8">
-                        <h3 class="text-2xl font-bold mb-6">
-                            Message From Founder <br>
-                            <span class="text-orange-500">Queen International Bali</span>
+                        <h3 class="text-4xl font-bold mb-6">
+                            Warm Greeating <br>
+                            <span class="text-orange-500">by The Founder & CEO Queen Internasional</span>
                         </h3>
-                        <p class="text-gray-700 leading-relaxed text-sm">
-                            Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Welcome to Queen Internasional the truly brand new campus, dengan dynamic dan innovative concept the center of excellent. <br><br>
+                            Sebuah kampus sebagai rumah bertransformasi mengajak kalian bermimpi hebat, menggapai impian hebatmu, melakukan tindakan hebat demi cita,cinta,masa depan, yang gemilang.
+                            Kampus yang menemanimu menemukan hasrat,membingkai hobby serta passion mu, menggelorakan semangat perjuangan sebagai landasan kuat berpijak untuk bersama - sama bergandengan tangan mengarungi samudra kasih kehidupan sebagai berkah dan karunia dari Tuhan yang maha kuasa patut untuk di syukuri.<br><br>
+                            Congratulation for joining hospitality kampus terbaik jaman now.Congratulation to be a part of the Queeners Famaily.
+                            
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    
+
+
+
 
 
     <!-- Partner -->
@@ -212,9 +500,9 @@
             <div class="md:flex items-center max-w-6xl mx-auto">
                 <div class="md:w-1/3 mb-8 md:mb-0 pr-8">
                     <h2 class="text-3xl font-bold mb-6">Partner</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed">
+                    {{-- <p class="text-gray-600 text-sm leading-relaxed">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
+                    </p> --}}
                 </div>
                 <div class="md:w-2/3">
                     <div class="overflow-hidden relative">
@@ -269,119 +557,183 @@
 
 
 
-    <!-- Sertifikat -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">CERTIFICATE</h2>
-            <div class="flex items-center justify-center max-w-6xl mx-auto" id="certificateSection">
-                <button id="prevCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors mr-4 z-10">‹</button>
-                <div class="flex-1 overflow-hidden">
-                    <div class="flex items-center justify-center transition-transform duration-500 ease-in-out" id="certificateSlider">
-                        <!-- Certificates will be dynamically inserted here -->
-                    </div>
-                </div>
-                <button id="nextCert" class="w-12 h-12 bg-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-400 transition-colors ml-4 z-10">›</button>
-            </div>
-        </div>
-    </section>
+
+
+
+
+
+
+    
 
 
 
     <!-- Program -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" id="program">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">PROGRAM STUDY</h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="100">
                     <img src="image/homepage/program/gambar2.jpeg" 
                          alt="Kapal Pesiar" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Kapal Pesiar</h3>
-                        <p class="text-gray-600 text-sm mb-4">Program ini dijalankan untuk yang ingin bekerja di kapal</p>
-                        <button class="text-orange-500 font-semibold text-sm hover:underline">Detail</button>
+                        <h3 class="text-2xl font-bold mb-2">Kapal Pesiar</h3>
+                        <p class="text-gray-600 text-md mb-4">Perekrutan kapal pesiar di Queen International dilaksanakan secara profesional melalui tahapan seleksi yang terstruktur, dimulai dengan sesi wawancara untuk menilai kemampuan komunikasi, keterampilan, dan kesiapan kandidat bekerja di lingkungan internasional.</p>
+                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="200">
                     <img src="image/homepage/program/gambar1.jpeg" 
                          alt="Kuliah Keluar Negeri" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Kuliah Keluar Negeri</h3>
-                        <p class="text-gray-600 text-sm mb-4">Program ini dijalankan untuk yang ingin bekerja di luar negeri</p>
-                        <button class="text-orange-500 font-semibold text-sm hover:underline">Detail</button>
+                        <h3 class="text-2xl font-bold mb-2">Kuliah Keluar Negeri</h3>
+                        <p class="text-gray-600 text-md mb-4">Program internship atau magang ke luar negeri Queen International dirancang sebagai kesempatan berharga bagi mahasiswa untuk memperoleh pengalaman kerja nyata di industri perhotelan dan kapal pesiar bertaraf internasional.</p>
+                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="300">
                     <img src="image/homepage/banner/banner3.jpg" 
                          alt="Perhotelan" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Perhotelan</h3>
-                        <p class="text-gray-600 text-sm mb-4">Program ini dijalankan untuk yang ingin bekerja di hotel</p>
-                        <button class="text-orange-500 font-semibold text-sm hover:underline">Detail</button>
+                        <h3 class="text-2xl font-bold mb-2">Perhotelan</h3>
+                        <p class="text-gray-600 text-md mb-4">Program kuliah Hospitality di Queen International dirancang untuk membekali mahasiswa dengan pengetahuan dan keterampilan komprehensif di industri perhotelan melalui kurikulum yang terfokus pada empat jurusan unggulan, yaitu Food & Beverage Product, Food & Beverage Service, Front Office, dan Housekeeping. </p>
+                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
 
 
 
     <!-- Fasilitas -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">FASILITAS</h2>
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-6xl mx-auto">
-                <div class="md:flex h-96">
-                    <div class="md:w-1/2 p-8 flex items-center relative" 
-                         style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=400&fit=crop')">
-                        <div class="text-white">
-                            <h3 class="text-3xl font-bold mb-4">Our Five Star Facilities</h3>
-                            <p class="text-gray-200">Fasilitas terbaik dengan standar internasional untuk mendukung proses pembelajaran yang optimal.</p>
+    <section class="py-24 bg-gradient-to-br from-gray-50 to-gray-100" >
+        <div class="container mx-auto px-1">
+            <div class="text-center mb-20">
+                <h2 class="text-5xl font-bold text-orange-500 mb-6">FASILITAS</h2>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-7xl mx-auto" id="fasilitas">
+                <div class="lg:flex">
+                    <!-- Left Content -->
+                    <div class="lg:w-2/5 p-10 flex items-center relative" 
+                        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&h=400&fit=crop')">
+                        <div class="text-white relative z-10">
+                            <h3 class="text-4xl font-bold mb-6 leading-tight">
+                                Our Five Star Facilities
+                            </h3>
+                            <p class="text-gray-200 text-lg leading-relaxed mb-8">
+                                Fasilitas terbaik dengan standar internasional untuk mendukung proses pembelajaran yang optimal.
+                            </p>
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-4">
-                        <div class="grid grid-cols-3 gap-2 h-full overflow-hidden">
-                            <div class="facility-slide-up">
-                                <div class="facility-column space-y-2">
-                                    <img src="image/homepage/fasilitas/gambar1.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar2.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar3.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar4.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                    
+                    <!-- Right Content - Enhanced height -->
+                    <div class="lg:w-3/5 p-6">
+                        <div class="facility-container" style="height: 500px;"> <!-- Increased height -->
+                            <div class="grid grid-cols-3 gap-4 h-full">
+                                <!-- Column 1 - Slide Up -->
+                                <div class="facility-slide-up">
+                                    <div class="facility-column">
+                                        <!-- Duplicate images to make the column longer -->
+                                        <img src="image/homepage/fasilitas/gambar1.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar2.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar3.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar4.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+
+                                        <img src="image/homepage/fasilitas/gambar1.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar2.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar3.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar4.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+
+                                        
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="facility-slide-down">
-                                <div class="facility-column space-y-2">
-                                   <img src="image/homepage/fasilitas/gambar5.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar6.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar7.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar8.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                
+                                <!-- Column 2 - Slide Down -->
+                                <div class="facility-slide-down">
+                                    <div class="facility-column">
+                                        <!-- Duplicate images to make the column longer -->
+                                        <img src="image/homepage/fasilitas/gambar5.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar6.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar7.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar8.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+
+                                        <img src="image/homepage/fasilitas/gambar5.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar6.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar7.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar8.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="facility-slide-up">
-                                <div class="facility-column space-y-2">
-                                    <img src="image/homepage/fasilitas/gambar9.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar10.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar11.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
-                                    <img src="image/homepage/fasilitas/gambar12.jpg" 
-                                         alt="Office" class="rounded w-full h-20 object-cover">
+                                
+                                <!-- Column 3 - Slide Up -->
+                                <div class="facility-slide-up">
+                                    <div class="facility-column">
+                                        <!-- Duplicate images to make the column longer -->
+                                        <img src="image/homepage/fasilitas/gambar9.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar10.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar11.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar12.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        
+                                        <img src="image/homepage/fasilitas/gambar9.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar10.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar11.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        <img src="image/homepage/fasilitas/gambar12.jpg" 
+                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -454,15 +806,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
     <!-- Our Social Media -->
     <section class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="bg-white rounded-lg shadow-xl overflow-hidden max-w-6xl mx-auto">
                 <div class="md:flex md:items-center">
                     <div class="md:w-1/3 p-8">
+                        
+                        
+                        <div class="pb-5">
+                           <img src="image/homepage/activity/gambar2.jpg" alt="">
+                        </div>
+
                         <h2 class="text-3xl font-bold text-orange-500 mb-6">Our Sosmed!</h2>
                         
                         <div class="mt-8 space-y-3">
+                           
                             <a href="#" class="flex items-center p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300">
                                 <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
@@ -488,6 +858,12 @@
                                 Twitter
                             </a>
                         </div>
+
+                        <div class="pt-5">
+                             <img src="image/homepage/activity/gambar2.jpg" alt="">
+                        </div>
+
+                         
                     </div>
                     <div class="md:w-2/3  p-8 bg-white">
                         <div class="h-auto bg-gray-100 rounded-lg flex items-center justify-center">
@@ -505,35 +881,75 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!-- Footer -->
     <footer class="bg-black text-white py-16">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div>
+            <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <!-- Logo & Alamat -->
+                <div class="md:col-span-3 flex flex-col items-center md:items-start">
                     <div class="flex items-center mb-6">
-                        <div class=" rounded flex items-center justify-center mr-3 -mt-5">
+                        <div class="rounded flex items-center justify-center mr-3 -mt-5">
                             <img src="image/homepage/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
                         </div>
-                        
                     </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Jl. Bypass Ngurah Rai, Danpesar Timur<br>
-                        Denpasar, Bali<br><br>
-                        Email: queen@international.com
-                    </p>
+                    <!-- Alamat di bawah logo, deret ke samping di desktop -->
+                    <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0 w-full justify-center md:justify-start">
+                        <!-- Alamat 1 -->
+                        <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                            <h4 class="font-bold mb-2 text-sm">ALAMAT 1 :</h4>
+                            <span class="font-semibold">EZZY Heritage</span><br>
+                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL GIANYAR</span><br>
+                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                            Telp. (0361) 945 887</span> </br>
+                            <span>Email: queenbali@gmail.com</span>
+                        </a>
+                        <!-- Alamat 2 -->
+                        <a href="https://maps.google.com/?q=Jl. Hayam Wuruk, No. 226B, Denpasar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                            <h4 class="font-bold mb-2 text-sm">ALAMAT 2 :</h4>
+                            <span class="font-semibold">EZZY City</span><br>
+                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL DENPASAR</span><br>
+                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                            Telp. (0361) 945 887</span> </br>
+                            <span>Email: queenbali@gmail.com</span>
+
+                        </a>
+                        <!-- Alamat 3 -->
+                        <a href="https://maps.google.com/?q=Jl. By Pass I Gusti Ngurah Rai, No.27e, Nusa Dua, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                            <h4 class="font-bold mb-2 text-sm">ALAMAT 3 :</h4>
+                            <span class="font-semibold">EZZY Autograph</span><br>
+                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL NUSA DUA</span><br>
+                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                            Telp. (0361) 945 887</span> </br>
+                            <span>Email: queenbali@gmail.com</span>
+                        </a>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-orange-500">Menu</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Beranda</a></li>
-                        {{-- <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Program</a></li> --}}
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6 text-orange-500">Maps</h3>
-                    <div class="bg-gray-800 rounded-lg h-32 flex items-center justify-center">
-                        <span class="text-gray-500 text-sm">📍 Google Maps Location</span>
+                <!-- Maps di kanan -->
+                <div class="flex flex-col items-center md:items-end w-full">
+                    <div class="relative w-full">
+                        <h3 class="text-lg font-semibold text-orange-500 text-center absolute top-0 left-1/2 transform -translate-x-1/2 z-20 w-full pointer-events-none">
+                            Maps
+                        </h3>
+                        <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank"
+                            class="block bg-gray-800 rounded-lg h-56 w-full md:w-64 flex items-center justify-center hover:bg-gray-700 transition overflow-hidden mt-8 relative">
+                            <img src="image/homepage/maps-preview.jpg" alt="Lokasi Kampus" class="object-cover w-full h-full" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -615,6 +1031,95 @@
             initializeBanner();
             initializeCertificateSlider();
             initializeScrollEffects();
+            const facilityImages = document.querySelectorAll('.facility-column img');
+            
+            facilityImages.forEach(img => {
+                img.addEventListener('mouseenter', function() {
+                    // Pause all animations when hovering over an image
+                    const columns = document.querySelectorAll('.facility-column');
+                    columns.forEach(column => {
+                        column.style.animationPlayState = 'paused';
+                    });
+                    
+                    // Add special hover effect
+                    this.style.transform = 'scale(1.1) rotate(2deg)';
+                    this.style.zIndex = '20';
+                });
+                
+                img.addEventListener('mouseleave', function() {
+                    // Resume animations
+                    const columns = document.querySelectorAll('.facility-column');
+                    columns.forEach(column => {
+                        column.style.animationPlayState = 'running';
+                    });
+                    
+                    // Reset hover effect
+                    this.style.transform = '';
+                    this.style.zIndex = '';
+                });
+                
+                // Add click effect
+                img.addEventListener('click', function() {
+                    // Create a temporary zoom effect
+                    this.style.transform = 'scale(1.15)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+            
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            // Observe facility section
+            const facilitySection = document.querySelector('section');
+            if (facilitySection) {
+                facilitySection.style.opacity = '0';
+                facilitySection.style.transform = 'translateY(50px)';
+                facilitySection.style.transition = 'all 0.8s ease-out';
+                observer.observe(facilitySection);
+            }
+            
+            // Performance optimization
+            let ticking = false;
+            
+            function updateAnimations() {
+                // Check if user prefers reduced motion
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    const animations = document.querySelectorAll('.facility-column');
+                    animations.forEach(animation => {
+                        animation.style.animation = 'none';
+                    });
+                }
+                ticking = false;
+            }
+            
+            function requestTick() {
+                if (!ticking) {
+                    requestAnimationFrame(updateAnimations);
+                    ticking = true;
+                }
+            }
+            
+            // Add error handling for images
+            facilityImages.forEach(img => {
+                img.addEventListener('error', function() {
+                    this.style.backgroundColor = '#f3f4f6';
+                    this.style.display = 'flex';
+                    this.style.alignItems = 'center';
+                    this.style.justifyContent = 'center';
+                    this.innerHTML = '<span style="color: #9ca3af; font-size: 12px;">Image not available</span>';
+                });
+            });
         });
 
         // Banner Functions
@@ -748,6 +1253,8 @@
 
         function updateCertificateSlider() {
             const certificateItems = document.querySelectorAll('.certificate-item');
+            const isMobile = window.innerWidth < 768;
+            const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
             
             certificateItems.forEach((item, index) => {
                 let dataIndex;
@@ -767,36 +1274,57 @@
                 
                 const currentData = certificateData[dataIndex];
                 
-                // Style based on position
+                // Style based on position and screen size
                 if (index === 2) { // Center item
                     item.className = 'certificate-item certificate-center flex-shrink-0 transition-all duration-500 ease-in-out';
-                
-                        item.innerHTML = `
-                            <div class="w-64 h-48 md:w-72 md:h-52 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-2">
-                                <div class="text-center text-white">
-                                     <img src="image/homepage/sertifikat/${currentData.image}" alt="">
-                                </div>
-                            </div>
-                        `;
-                  
-                        item.innerHTML = `
-                            <div class="w-64 h-48 md:w-72 md:h-52  rounded-lg shadow-xl flex items-center justify-center mx-2">
-                                <div class="text-center text-white">
-                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="">
-                                </div>
-                            </div>
-                        `;
                     
-                } else { // Side items
-                    item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out';
-                
-                    item.innerHTML = `
-                        <div class="w-48 h-36 md:w-56 md:h-40  rounded-lg shadow-lg flex items-center justify-center mx-2">
-                            <div class="text-center text-gray-600">
-                                  <img src="image/homepage/sertifikat/${currentData.image}" alt="">
+                    if (isMobile) {
+                        item.innerHTML = `
+                            <div class="w-full max-w-[280px] bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-1">
+                                <div class="text-center text-white p-3">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[200px] object-contain rounded">
+                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
+                    } else if (isTablet) {
+                        item.innerHTML = `
+                            <div class="w-60 h-44 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-2">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[160px] object-contain rounded">
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        item.innerHTML = `
+                            <div class="w-72 h-56 bg-gradient-to-br from-red-500 to-yellow-500 rounded-lg shadow-xl flex items-center justify-center mx-3">
+                                <div class="text-center text-white p-4">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-full object-contain rounded">
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else { // Side items
+                    if (isMobile) {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out hidden';
+                    } else if (isTablet) {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out opacity-50';
+                        item.innerHTML = `
+                            <div class="w-48 h-36 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg shadow-lg flex items-center justify-center mx-1">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-auto max-h-[120px] object-contain rounded opacity-80">
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        item.className = 'certificate-item certificate-side flex-shrink-0 transition-all duration-500 ease-in-out opacity-60';
+                        item.innerHTML = `
+                            <div class="w-56 h-40 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg shadow-lg flex items-center justify-center mx-2">
+                                <div class="text-center text-white p-2">
+                                    <img src="image/homepage/sertifikat/${currentData.image}" alt="Certificate" class="w-full h-full object-contain rounded opacity-80">
+                                </div>
+                            </div>
+                        `;
+                    }
                 }
             });
         }
@@ -967,7 +1495,8 @@
         function preloadCriticalImages() {
             const criticalImages = [
                 'images/IMG_1037.png',
-                'images/PULPEN.png',
+                'images/PULPEN.png',                /* Add this to your CSS file or inside a <style> tag */
+                
                 'images/LOGO FULL.png'
             ];
             
@@ -976,9 +1505,18 @@
                 img.src = src;
             });
         }
+        
 
         // Call preload function
         preloadCriticalImages();
+        (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ecd4039402f8fc',t:'MTc1NTEzNjUwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+    </script>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
