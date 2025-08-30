@@ -47,7 +47,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">  <!--untuk file edit-->
+   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">  <!--untuk file edit-->
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -63,7 +63,22 @@
       integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
       crossorigin="anonymous"
     />
+<!-- Summernote Lite CSS -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+<style>
+.note-editor { z-index: 1050; } /* supaya toolbar tidak tertutup AdminLTE */
+#image-preview {
+    display: none;
+    max-width: 300px;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+}
+</style>
   </head>
+  
+
   <!--end::Head-->
   <!--begin::Body-->
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
@@ -154,6 +169,12 @@
                   <p>Banner</p>
                 </a>
               </li>
+              <li class="nav-item">
+    <a href="{{ route('kegiatan.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-calendar-event"></i>
+        <p>Kegiatan</p>
+    </a>
+</li>
 
 
 
@@ -206,21 +227,16 @@
         <!--end::Sidebar Wrapper-->
       </aside>
       <!--end::Sidebar-->
-    
-    
+
+
       <!--begin::App Main-->
       <main class="app-main">
-        
+
 
         @yield('content')
 
-
-
       </main>
       <!--end::App Main-->
-
-
-
 
       <!--begin::Footer-->
       <footer class="app-footer">
@@ -487,6 +503,45 @@
       sparkline3.render();
     </script>
     <!--end::Script-->
+    <!-- jQuery (dibutuhkan Summernote) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Sweet Alert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@yield('scripts')
+
+<!-- Summernote Lite JS -->
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Inisialisasi Summernote
+      $('#deskripsi').summernote({
+          placeholder: 'Tulis deskripsi kegiatan di sini...',
+          height: 250,
+          toolbar: [
+              ['style', ['bold','italic','underline','clear']],
+              ['font', ['fontsize','color']],
+              ['para', ['ul','ol','paragraph']],
+              ['insert', ['link','picture','video','table','hr']],
+              ['view', ['fullscreen','codeview','help']],
+              ['misc', ['undo','redo']]
+          ]
+      });
+
+    // Preview gambar
+    const imageInput = document.getElementById('image-input');
+    const imagePreview = document.getElementById('image-preview');
+
+    imageInput.addEventListener('change', (e) => {
+        const [file] = e.target.files;
+        if(file){
+            imagePreview.src = URL.createObjectURL(file);
+            imagePreview.style.display = 'block';
+        }
+    });
+});
+</script>
+
   </body>
   <!--end::Body-->
 </html>

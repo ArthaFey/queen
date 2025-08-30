@@ -1,13 +1,7 @@
-
-        * {
-            font-family: 'Poppins', sans-serif !important;
+   body {
+         font-family: "Crimson Text", serif;
+         padding-top: 0px;
         }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            padding-top: 0px;
-        }
-
         /* Sticky Header Styles */
         header.scrolled {
             background: rgba(255, 255, 255, 0.95);
@@ -63,8 +57,17 @@
             animation: slideInfinite 25s linear infinite;
         }
 
+        .facility-container {
+            height: 384px;
+            overflow: hidden;
+            position: relative;
+        }
+
         /* Facilities Endless Loop Animation */
         .facility-column {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             animation: facilitySlideUp 20s linear infinite;
         }
 
@@ -97,41 +100,202 @@
             transform: scale(0.75);
         }
 
-        /* Hover Effects */
-        .certificate-item:hover {
-            transform: scale(1.05);
+        /* Responsive Certificate Styles - Mobile First */
+        @media (max-width: 768px) {
+            .certificate-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .certificate-center {
+                transform: scale(1);
+                z-index: 10;
+            }
+            
+            .certificate-side {
+                opacity: 0.4;
+                transform: scale(0.8);
+                display: none;
+            }
+            
+            #certificateSlider {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .certificate-item img {
+                max-height: 200px;
+                width: 100%;
+                object-fit: contain;
+            }
+            
+            #certificateSection {
+                padding: 0 10px;
+            }
+            
+            #prevCert, #nextCert {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            body {
-                padding-top: 0px;
-            }
-            
-            .partner-slide {
-                animation-duration: 20s;
-            }
-            
-            .slide-animation {
-                animation-duration: 15s;
-            }
-
-            .facility-column {
-                animation-duration: 15s;
-            }
-
+        @media (min-width: 769px) and (max-width: 1024px) {
             .certificate-item {
+                width: 200px;
                 margin: 0 10px;
             }
-
+            
             .certificate-center {
                 transform: scale(1.05);
             }
-
+            
             .certificate-side {
-                transform: scale(0.8);
+                opacity: 0.5;
+                transform: scale(0.85);
+            }
+            
+            .certificate-item img {
+                max-height: 150px;
             }
         }
+
+        @media (min-width: 1025px) {
+            .certificate-item {
+                width: 240px;
+                margin: 0 15px;
+            }
+            
+            .certificate-center {
+                transform: scale(1.1);
+            }
+            
+            .certificate-side {
+                opacity: 0.6;
+                transform: scale(0.75);
+            }
+            
+            .certificate-item img {
+                max-height: 180px;
+            }
+        }
+
+        /* Additional responsive utilities for certificate section */
+        .certificate-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        @media (max-width: 480px) {
+            .certificate-container {
+                padding: 0 10px;
+            }
+            
+            .certificate-item {
+                max-width: 280px;
+            }
+            
+            .certificate-item img {
+                max-height: 180px;
+            }
+        }
+
+        /* Touch-friendly navigation for mobile */
+        @media (max-width: 768px) {
+            #prevCert, #nextCert {
+                min-width: 44px;
+                min-height: 44px;
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: transparent;
+            }
+            
+            #certificateSection {
+                overflow-x: hidden;
+            }
+        }
+
+        /* Improved responsive layout for certificate grid */
+        .certificate-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .certificate-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .certificate-grid {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+
+        /* Activities Slider Styles - IMPROVED */
+        .activities-slider-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.0);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Activity Navigation Buttons - Matching Certificate Style */
+        .activity-nav-btn {
+    width: 44px;
+    height: 44px;
+    background: #6366f1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.15);
+}
+.activity-nav-btn:hover {
+    background: #4f46e5;
+}
+.activity-slide-indicator {
+    background: #c7d2fe;
+    transition: background 0.2s, transform 0.2s;
+}
+.activity-slide-indicator.bg-indigo-600,
+.activity-slide-indicator.active {
+    background: #6366f1;
+    transform: scale(1.2);
+}
 
         /* Loading Animation */
         .loading {
@@ -161,18 +325,11 @@
             background: #e55a30;
         }
 
-        /* Ensure all text uses Poppins */
-        h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
-            font-family: 'Poppins', sans-serif !important;
+        .facility-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Pause animations on hover */
-        .partner-slide:hover,
-        .slide-animation:hover,
-        .facility-column:hover {
-            animation-play-state: paused;
-        }
-
-        #heroSection:hover .banner-auto-slide {
-            animation-play-state: paused;
-        }
+      
