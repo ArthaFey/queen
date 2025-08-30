@@ -4,26 +4,18 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
+return new class extends Migration {
     public function up(): void
     {
-        Schema::create('sertifikats', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('image');
-            $table->timestamps();
+        Schema::table('sertifikats', function (Blueprint $table) {
+            $table->string('alt')->after('id');
+            $table->string('src')->after('alt');
+        });
+    }        public function down(): void
+    {
+        Schema::table('sertifikats', function (Blueprint $table) {
+            $table->dropColumn(['alt', 'src']);
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('sertifikats');
-    }
 };
+

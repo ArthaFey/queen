@@ -6,6 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sertifikat extends Model
 {
-    protected $guarded = [];
-    
+    protected $fillable = ['alt', 'src'];
 }

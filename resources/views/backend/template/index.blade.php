@@ -25,11 +25,10 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
-
-    <!--begin::SweetAlert Plugin-->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+       <!--begin::SweetAlert Plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--end::Fonts-->
     @yield('scripts')
-  
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -47,7 +46,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">  <!--untuk file edit-->
+<link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -502,7 +501,6 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
-    <!--end::Script-->
     <!-- jQuery (dibutuhkan Summernote) -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Sweet Alert -->
@@ -542,6 +540,8 @@ $(document).ready(function() {
 });
 </script>
 
+@yield('scripts')
+    <!--end::Script-->
   </body>
   <!--end::Body-->
 </html>
