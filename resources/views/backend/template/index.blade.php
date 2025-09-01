@@ -223,6 +223,8 @@
       <!--end::Sidebar-->
 
 
+
+
       <!--begin::App Main-->
       <main class="app-main">
 
@@ -233,9 +235,6 @@
 
       </main>
       <!--end::App Main-->
-
-
-
 
       <!--begin::Footer-->
       <footer class="app-footer">
@@ -502,7 +501,7 @@
       sparkline3.render();
     </script>
     <!--end::Script-->
-    <!-- jQuery (dibutuhkan Summernote) -->
+  <!-- jQuery (dibutuhkan Summernote) -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -515,7 +514,7 @@
 $(document).ready(function() {
     // Inisialisasi Summernote
       $('#deskripsi').summernote({
-          placeholder: 'Tulis deskripsi program di sini...',
+          placeholder: 'Tulis deskripsi di sini...',
           height: 250,
           toolbar: [
               ['style', ['bold','italic','underline','clear']],
