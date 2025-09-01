@@ -85,7 +85,9 @@ Route::delete('/banners/{id}', [BannerController::class, 'destroy'])->name('bann
 
 
 
-// ## PROGRAM ## //
+// =======================
+// PROGRAM
+// =======================
 Route::get('/program', [ProgramController::class, 'index'])->name('program.index');      // List program
 Route::get('/program/create', [ProgramController::class, 'create'])->name('program.create'); // Form tambah
 Route::post('/program', [ProgramController::class, 'store'])->name('program.store');         // Simpan baru
