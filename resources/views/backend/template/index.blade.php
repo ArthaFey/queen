@@ -162,20 +162,35 @@
               data-accordion="false">
 
              <li class="nav-item">
-    <a href="{{ route('banner') }}" class="nav-link">
-        <i class="nav-icon bi bi-palette"></i>
-        <p>Banner</p>
-    </a>
-</li>
+                <a href="{{ route('banner') }}" class="nav-link">
+                    <i class="nav-icon bi bi-palette"></i>
+                    <p>Banner</p>
+                </a>
+            </li>
 
-<li class="nav-item">
-    <a href="{{ route('kegiatan.index') }}" class="nav-link">
-        <i class="nav-icon bi bi-calendar-event"></i>
-        <p>Kegiatan</p>
-    </a>
-</li>
+            <li class="nav-item">
+                <a href="{{ route('kegiatan.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Kegiatan</p>
+                </a>
+            </li>
 
-               <li class="nav-item menu-open">
+              <li class="nav-item">
+                <a href="{{ route('sertifikat.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sertifikat</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('partner.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Partner</p>
+                </a>
+            </li>
+
+
+               {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
@@ -215,7 +230,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> --}}
 
             </ul>
             <!--end::Sidebar Menu-->
