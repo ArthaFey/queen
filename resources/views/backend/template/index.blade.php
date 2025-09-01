@@ -170,11 +170,18 @@
               </li>
 
               <li class="nav-item">
-                  <a href="{{ route('kegiatan.index') }}" class="nav-link">
-                      <i class="nav-icon bi bi-calendar-event"></i>
-                      <p>Kegiatan</p>
-                  </a>
-              </li>
+    <a href="{{ route('program.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-calendar-event"></i>
+        <p>program</p>
+    </a>
+</li>
+
+<li class="nav-item">
+    <a href="{{ route('kegiatan.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-calendar-event"></i>
+        <p>Kegiatan</p>
+    </a>
+</li>
 
               <li class="nav-item">
                 <a href="{{ route('sertifikat.index') }}" class="nav-link">
@@ -242,11 +249,15 @@
       <!--end::Sidebar-->
 
 
+
+
       <!--begin::App Main-->
       <main class="app-main">
 
 
         @yield('content')
+
+
 
       </main>
       <!--end::App Main-->
@@ -515,9 +526,10 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
-    <!-- jQuery (dibutuhkan Summernote) -->
+    <!--end::Script-->
+  <!-- jQuery (dibutuhkan Summernote) -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<!-- Sweet Alert -->
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @yield('scripts')
 
@@ -528,7 +540,7 @@
 $(document).ready(function() {
     // Inisialisasi Summernote
       $('#deskripsi').summernote({
-          placeholder: 'Tulis deskripsi kegiatan di sini...',
+          placeholder: 'Tulis deskripsi di sini...',
           height: 250,
           toolbar: [
               ['style', ['bold','italic','underline','clear']],
@@ -555,7 +567,8 @@ $(document).ready(function() {
 </script>
 
 @yield('scripts')
-    <!--end::Script-->
+<!-- Sweet Alert -->
+
   </body>
   <!--end::Body-->
 </html>
