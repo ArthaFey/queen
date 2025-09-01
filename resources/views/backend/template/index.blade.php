@@ -164,17 +164,17 @@
 
              <li class="nav-item">
                 <a href="{{ route('banners.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-palette"></i>
+                  <i class="nav-icon bi bi-calendar-event"></i>
                   <p>Banner</p>
                 </a>
               </li>
 
-<li class="nav-item">
-    <a href="{{ route('kegiatan.index') }}" class="nav-link">
-        <i class="nav-icon bi bi-calendar-event"></i>
-        <p>Kegiatan</p>
-    </a>
-</li>
+              <li class="nav-item">
+                  <a href="{{ route('kegiatan.index') }}" class="nav-link">
+                      <i class="nav-icon bi bi-calendar-event"></i>
+                      <p>Kegiatan</p>
+                  </a>
+              </li>
 
               <li class="nav-item">
                 <a href="{{ route('sertifikat.index') }}" class="nav-link">
