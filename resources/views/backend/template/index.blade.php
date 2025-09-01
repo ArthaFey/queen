@@ -25,9 +25,10 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
-    <!--begin::SweetAlert Plugin-->
+       <!--begin::SweetAlert Plugin-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--end::Fonts-->
+    @yield('scripts')
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -45,7 +46,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -162,18 +163,18 @@
               data-accordion="false">
 
              <li class="nav-item">
-                <a href="{{ route('banner') }}" class="nav-link">
-                    <i class="nav-icon bi bi-palette"></i>
-                    <p>Banner</p>
+                <a href="{{ route('banners.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Banner</p>
                 </a>
-            </li>
+              </li>
 
-            <li class="nav-item">
-                <a href="{{ route('kegiatan.index') }}" class="nav-link">
-                    <i class="nav-icon bi bi-calendar-event"></i>
-                    <p>Kegiatan</p>
-                </a>
-            </li>
+<li class="nav-item">
+    <a href="{{ route('kegiatan.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-calendar-event"></i>
+        <p>Kegiatan</p>
+    </a>
+</li>
 
               <li class="nav-item">
                 <a href="{{ route('sertifikat.index') }}" class="nav-link">
