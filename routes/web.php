@@ -7,7 +7,9 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
 
-// ## HOMEPAGE ## //
+// =======================
+// HOMEPAGE
+// =======================
 Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
 
 
@@ -62,7 +64,9 @@ Route::prefix('partner')->group(function () {
 });
 
 
-// BANNER CRUD 
+// =======================
+// BANNER
+// =======================
 
 // Route lama tetap dipakai (akses /banner untuk daftar)
 Route::get('/banner', [BannerController::class, 'index'])->name('banner');
