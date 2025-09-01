@@ -1,14 +1,20 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\SertifikatController;
+use App\Http\Controllers\PartnerController;
 
-// ## HOMEPAGE ##
-Route::get('/', [FrontEndController::class, 'home'])->name('frontend.home');
+// =======================
+// HOMEPAGE
+// =======================
+Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
 
 // ## BANNER ##
 Route::get('/banner', [BannerController::class, 'index'])->name('banner');

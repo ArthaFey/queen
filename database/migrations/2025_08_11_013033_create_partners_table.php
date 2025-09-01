@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+            $table->string('src');   // path gambar yang diupload
             $table->timestamps();
         });
     }

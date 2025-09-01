@@ -25,6 +25,10 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
+       <!--begin::SweetAlert Plugin-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--end::Fonts-->
+    @yield('scripts')
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -159,11 +163,11 @@
               data-accordion="false">
 
              <li class="nav-item">
-    <a href="{{ route('banner') }}" class="nav-link">
-        <i class="nav-icon bi bi-palette"></i>
-        <p>Banner</p>
-    </a>
-</li>
+                <a href="{{ route('banners.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-palette"></i>
+                  <p>Banner</p>
+                </a>
+              </li>
 
 <li class="nav-item">
     <a href="{{ route('program.index') }}" class="nav-link">
@@ -172,7 +176,22 @@
     </a>
 </li>
 
-               <li class="nav-item menu-open">
+              <li class="nav-item">
+                <a href="{{ route('sertifikat.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sertifikat</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('partner.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Partner</p>
+                </a>
+            </li>
+
+
+               {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
@@ -212,7 +231,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> --}}
 
             </ul>
             <!--end::Sidebar Menu-->

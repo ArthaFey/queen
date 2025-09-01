@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Selamat Ezzy yang hebat, selamat datang di rumah kedua kita, sebuah rumah harapan perjalanan pendidikan rumah bagi generasi muda, bertransformasi menjadi pribadi - pribadi yang lebih baik, lebih termotivasi lebih percaya diri, lebih memiliki pengetahuan terhadap hari esok yang cemerlang, sebuah rumah dimana cita - cita harapan kita diharapkan bisa diwujudkannya dengan nyata dihantarkan kita, didorong dan dimotivasi untuk mewujudkannya dengan nyata diharapkan kita.">
+    <meta name="description" content="Welcome to Queen Internasional the truly brand new campus, dengan dynamic dan innovative concept the center of excellent. <br><br>
+                            Sebuah kampus sebagai rumah bertransformasi mengajak kalian bermimpi hebat, menggapai impian hebatmu, melakukan tindakan hebat demi cita,cinta,masa depan, yang gemilang.
+                            Kampus yang menemanimu menemukan hasrat,membingkai hobby serta passion mu, menggelorakan semangat perjuangan sebagai landasan kuat berpijak untuk bersama - sama bergandengan tangan mengarungi samudra kasih kehidupan sebagai berkah dan karunia dari Tuhan yang maha kuasa patut untuk di syukuri.<br><br>
+                            Congratulation for joining hospitality kampus terbaik jaman now.Congratulation to be a part of the Queeners Family.">
     <title>Queen International Bali</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tambahkan Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/homepage/styles.css">
-    <link rel="icon" href="image/homepage/icon.png">
+    <link rel="icon" href="../image/homepage/icon.png">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +32,7 @@
         }
 
     </style>
+ 
 
 </head>
 <body class=" overflow-x-hidden ">
@@ -298,7 +302,7 @@
                             </div>
 
 
-                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
                                 <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
                                     <img src="image/homepage/activity/gambar4.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
                                 </div>
@@ -309,7 +313,7 @@
                             </div>
 
 
-                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
                                 <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
                                     <img src="image/homepage/activity/gambar7.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
                                 </div>
@@ -320,7 +324,7 @@
                             </div>
 
 
-                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover"">
+                              <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover">
                                 <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
                                     <img src="image/homepage/activity/gambar6.jpg" alt="Workshop Teknologi" class="w-full h-full object-cover">
                                 </div>
@@ -479,7 +483,7 @@
                             Welcome to Queen Internasional the truly brand new campus, dengan dynamic dan innovative concept the center of excellent. <br><br>
                             Sebuah kampus sebagai rumah bertransformasi mengajak kalian bermimpi hebat, menggapai impian hebatmu, melakukan tindakan hebat demi cita,cinta,masa depan, yang gemilang.
                             Kampus yang menemanimu menemukan hasrat,membingkai hobby serta passion mu, menggelorakan semangat perjuangan sebagai landasan kuat berpijak untuk bersama - sama bergandengan tangan mengarungi samudra kasih kehidupan sebagai berkah dan karunia dari Tuhan yang maha kuasa patut untuk di syukuri.<br><br>
-                            Congratulation for joining hospitality kampus terbaik jaman now.Congratulation to be a part of the Queeners Famaily.
+                            Congratulation for joining hospitality kampus terbaik jaman now.Congratulation to be a part of the Queeners Family.
                             
                         </p>
                     </div>
@@ -886,26 +890,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-    
-    <!-- Footer -->
-    <footer class="bg-black text-white py-16">
+<footer class="bg-black text-white py-16">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Logo & Alamat -->
                 <div class="md:col-span-3 flex flex-col items-center md:items-start">
                     <div class="flex items-center mb-6">
                         <div class="rounded flex items-center justify-center mr-3 -mt-5">
-                            <img src="image/homepage/LOGO FULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
+                            <img src="image/homepage/LOGOFULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
                         </div>
                     </div>
                     <!-- Alamat di bawah logo, deret ke samping di desktop -->
@@ -960,12 +952,8 @@
     </footer>
 
 
-   
 
-    
-
-    <!-- JavaScript for Enhanced Navbar -->
-     <script>
+   <script>
         const burgerBtn = document.getElementById('burger-btn');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -1497,7 +1485,7 @@
                 'images/IMG_1037.png',
                 'images/PULPEN.png',                /* Add this to your CSS file or inside a <style> tag */
                 
-                'images/LOGO FULL.png'
+                'images/LOGOFULL.png'
             ];
             
             criticalImages.forEach(src => {
@@ -1511,6 +1499,8 @@
         preloadCriticalImages();
         (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96ecd4039402f8fc',t:'MTc1NTEzNjUwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
     </script>
+
+ 
 
 
     <!-- AOS JS -->
