@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\ProgramController;
 
 // =======================
 // HOMEPAGE
@@ -67,7 +68,6 @@ Route::prefix('partner')->group(function () {
 // =======================
 // BANNER
 // =======================
-
 // Route lama tetap dipakai (akses /banner untuk daftar)
 Route::get('/banner', [BannerController::class, 'index'])->name('banner');
 // Route daftar banner 
@@ -82,3 +82,13 @@ Route::get('/banners/{id}/edit', [BannerController::class, 'edit'])->name('banne
 Route::put('/banners/{id}', [BannerController::class, 'update'])->name('banners.update');
 // Hapus banner
 Route::delete('/banners/{id}', [BannerController::class, 'destroy'])->name('banners.destroy');
+
+
+
+// ## PROGRAM ## //
+Route::get('/program', [ProgramController::class, 'index'])->name('program.index');      // List program
+Route::get('/program/create', [ProgramController::class, 'create'])->name('program.create'); // Form tambah
+Route::post('/program', [ProgramController::class, 'store'])->name('program.store');         // Simpan baru
+Route::get('/program/{id}/edit', [ProgramController::class, 'edit'])->name('program.edit');
+Route::put('/program/{id}', [ProgramController::class, 'update'])->name('program.update');
+Route::delete('/program/{id}', [ProgramController::class, 'destroy'])->name('program.destroy');
