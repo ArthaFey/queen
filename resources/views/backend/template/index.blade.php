@@ -172,7 +172,7 @@
               <li class="nav-item">
               <a href="{{ route('program.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-calendar-event"></i>
-                  <p>program</p>
+                  <p>Program</p>
               </a>
           </li>
 

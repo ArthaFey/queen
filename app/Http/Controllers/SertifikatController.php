@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Sertifikat;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class SertifikatController extends Controller
 {
@@ -84,6 +85,8 @@ class SertifikatController extends Controller
 
         $sertifikat->save();
 
+        Cache::forget('certificate_cache');
+
         return redirect()
             ->route('sertifikat.index')
             ->with('success', 'Sertifikat berhasil diperbarui.');
@@ -96,7 +99,8 @@ class SertifikatController extends Controller
     {
         $sertifikat = Sertifikat::findOrFail($id);
         $sertifikat->delete();
-
+        
+        Cache::forget('certificate_cache');
         return redirect()
             ->route('sertifikat.index')
             ->with('success', 'Sertifikat berhasil dihapus.');

@@ -47,7 +47,7 @@
             <form action="{{ route('program.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
                 <div class="mb-3">
-                    <label for="alt" class="form-label">judul</label>
+                    <label for="alt" class="form-label">Judul</label>
                     <input type="text" name="alt" class="form-control" value="{{ old('alt') }}" required>
                 </div>
                 <div class="mb-3">

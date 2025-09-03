@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class BannerController extends Controller
 {
@@ -51,7 +52,7 @@ class BannerController extends Controller
         }
 
         // Simpan data ke database
-        Banner::create([
+        $banner = Banner::create([
             'alt' => $request->alt,
             'src' => $filename
         ]);
@@ -98,6 +99,9 @@ class BannerController extends Controller
         $banner->alt = $request->alt;
         $banner->save();
 
+        Cache::forget('banner_cache');
+
+
         return redirect()->route('banners.index')->with('success', 'Banner berhasil diperbarui');
     }
 
@@ -115,6 +119,9 @@ class BannerController extends Controller
 
         // Hapus data dari database
         $banner->delete();
+        
+        Cache::forget('banner_cache');
+
 
         return redirect()->route('banners.index')->with('success', 'Banner berhasil dihapus');
     }

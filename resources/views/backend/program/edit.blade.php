@@ -42,7 +42,7 @@
 
                 <!-- Judul program -->
                 <div class="mb-3">
-                    <label for="alt" class="form-label">Judul Program</label>
+                    <label for="alt" class="form-label">Judul</label>
                     <input type="text" name="alt" id="alt" class="form-control" 
                            value="{{ old('alt', $program->alt) }}" required>
                 </div>

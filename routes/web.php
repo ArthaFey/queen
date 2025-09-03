@@ -7,14 +7,12 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProgramController;
+use Illuminate\Support\Facades\Cache;
 
 // =======================
 // HOMEPAGE
 // =======================
 Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
-
-
-
 
 
 // =======================
