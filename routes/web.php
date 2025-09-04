@@ -92,3 +92,13 @@ Route::post('/program', [ProgramController::class, 'store'])->name('program.stor
 Route::get('/program/{id}/edit', [ProgramController::class, 'edit'])->name('program.edit');
 Route::put('/program/{id}', [ProgramController::class, 'update'])->name('program.update');
 Route::delete('/program/{id}', [ProgramController::class, 'destroy'])->name('program.destroy');
+
+// =======================
+// TESTIMONI
+// =======================
+Route::get('/testimoni', [\App\Http\Controllers\TestimoniController::class, 'index'])->name('testimoni.index');
+Route::get('/testimoni/create', [\App\Http\Controllers\TestimoniController::class, 'create'])->name('testimoni.create');
+Route::post('/testimoni', [\App\Http\Controllers\TestimoniController::class, 'store'])->name('testimoni.store');
+Route::get('/testimoni/{id}/edit', [\App\Http\Controllers\TestimoniController::class, 'edit'])->name('testimoni.edit');
+Route::put('/testimoni/{id}', [\App\Http\Controllers\TestimoniController::class, 'update'])->name('testimoni.update');
+Route::delete('/testimoni/{id}', [\App\Http\Controllers\TestimoniController::class, 'destroy'])->name('testimoni.destroy');
