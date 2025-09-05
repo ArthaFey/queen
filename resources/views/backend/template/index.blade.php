@@ -162,7 +162,7 @@
               role="menu"
               data-accordion="false">
 
-             <li class="nav-item">
+              <li class="nav-item">
                 <a href="{{ route('banners.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-calendar-event"></i>
                   <p>Banner</p>
@@ -201,6 +201,10 @@
                 <a href="{{ route('sosmed.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
                     <p>Sosial Media</p>
+            <li class="nav-item">
+                <a href="{{ route('testimoni.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Testimoni</p>
                 </a>
             </li>
 

@@ -34,8 +34,10 @@ class FrontEndController extends Controller
                 return Kegiatan::all()->toArray();
             });
 
+            $testimoni = Cache::remember('testimoni_cache', 3600, function(){
+                return \App\Models\Testimoni::all()->toArray();
+            });
 
-
-            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan'));
+            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan','testimoni'));
         }
 }
