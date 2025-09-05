@@ -197,6 +197,13 @@
                 </a>
             </li>
 
+              <li class="nav-item">
+                <a href="{{ route('sosmed.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sosial Media</p>
+                </a>
+            </li>
+
 
                {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
