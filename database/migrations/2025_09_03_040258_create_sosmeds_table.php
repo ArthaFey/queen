@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('sosmeds', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('link');               // link sosmed (URL)
             $table->string('image');              // path image/icon sosmed
             $table->string('color')->nullable();  // warna brand sosmed (#hex / rgb)

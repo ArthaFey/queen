@@ -26,6 +26,13 @@
             <form action="{{ route('sosmed.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
+                 <div class="mb-3">
+                    <label for="link" class="form-label">Nama Media Sosial</label>
+                    <input type="text" name="nama" class="form-control" 
+                          placeholder="Masukan Nama Media Sosial..." required>
+                </div>
+
+
                 <!-- Link Sosmed -->
                 <div class="mb-3">
                     <label for="link" class="form-label">Link Sosmed</label>

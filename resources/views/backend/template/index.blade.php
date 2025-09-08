@@ -137,16 +137,16 @@
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
+          <a href="{{ route('frontend.home') }}" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../../dist/assets/img/AdminLTELogo.png"
+              src="{{ asset('icon.png') }}"
               alt="AdminLTE Logo"
               class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">AdminLTE 4</span>
+            
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -172,7 +172,7 @@
                 <li class="nav-item">
                 <a href="{{ route('sertifikat.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
-                    <p>Sertifikat</p>
+                    <p>Sertifikat & Achivment</p>
                 </a>
             </li>
 
@@ -190,10 +190,15 @@
                 </a>
             </li>
 
-              <li class="nav-item">
-                <a href="{{ route('sosmed.index') }}" class="nav-link">
-                    <i class="nav-icon bi bi-calendar-event"></i>
-                    <p>Sosial Media</p>
+
+            <li class="nav-item">
+              <a href="{{ route('program.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-event"></i>
+                  <p>Program</p>
+              </a>
+          </li>
+          
+
             <li class="nav-item">
                 <a href="{{ route('testimoni.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
@@ -202,13 +207,17 @@
             </li>
 
 
+             <li class="nav-item">
+                <a href="{{ route('sosmed.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sosial Media</p>
+                </a>
+            </li>
+           
 
-              <li class="nav-item">
-              <a href="{{ route('program.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-calendar-event"></i>
-                  <p>Program</p>
-              </a>
-          </li>
+
+
+           
 
           
 

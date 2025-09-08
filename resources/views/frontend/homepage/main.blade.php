@@ -40,7 +40,7 @@
     <header class="shadow relative">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="image/homepage/PULPEN.png" alt="Logo" class="h-20 w-auto md:h-20" style="height: 100px;" />
+                <img src="{{ asset('queenlogo.png') }}" alt="Logo" class="h-20 w-auto md:h-20" style="height: 100px;" />
             </div>
 
             <!-- Desktop Nav -->
@@ -54,8 +54,8 @@
                         <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
-                        {{-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a> --}}
-                        {{-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a> --}}
+                        <a href="{{ route('profile.queen') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a>
                         <a href="#fasilitas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
                     </div>
                 </div>
@@ -67,13 +67,14 @@
                         <svg class="w-3 h-3 fill-current mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 20 20"><path d="M5.5 7l4.5 4.5L14.5 7z"/></svg>
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
-                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Mahasiswa Baru</a>
-                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kapal Pesiar</a>
-                        <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Kuliah Luar Negeri</a>
+                       @foreach ($program as $data )                           
+                        <a href="{{ route('detail.program',$data['id']) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
+                       @endforeach
+
                     </div>
                 </div>
 
-                {{-- <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a> --}}
+                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
             </nav>
 
             <!-- Burger Menu (Mobile) -->
@@ -95,8 +96,8 @@
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
             <div id="subTentangKami" class="hidden pl-4 space-y-1 text-sm">
-                {{-- <a href="about us_profile.html" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
-                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a> --}}
+                <a href="{{ route('profile.queen') }}" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
+                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a>
                 <a href="#fasilitas" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
             </div>
 
@@ -106,12 +107,12 @@
                 <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></svg>
             </button>
             <div id="subProgram" class="hidden pl-4 space-y-1 text-sm">
-                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Mahasiswa Baru</a>
-                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kapal Pesiar</a>
-                <a href="#program" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Kuliah Luar Negeri</a>
+                @foreach ($program as $dataMobile )                           
+                        <a href="{{ route('detail.program',$dataMobile['id']) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
+                @endforeach
             </div>
 
-            {{-- <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a> --}}
+            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
         </div>
     </header>
 
@@ -148,7 +149,7 @@
                 <div class="md:col-span-3 flex flex-col items-center md:items-start">
                     <div class="flex items-center mb-6">
                         <div class="rounded flex items-center justify-center mr-3 -mt-5">
-                            <img src="image/homepage/LOGOFULL.png" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
+                            <img src="{{ asset('icon.png') }}" alt="Logo Queen" class="h-16 sm:h-20 w-auto">
                         </div>
                     </div>
                     <!-- Alamat di bawah logo, deret ke samping di desktop -->
@@ -156,28 +157,24 @@
                         <!-- Alamat 1 -->
                         <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
                             <h4 class="font-bold mb-2 text-sm">ALAMAT 1 :</h4>
-                            <span class="font-semibold">EZZY Heritage</span><br>
-                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL GIANYAR</span><br>
-                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                            <span class="font-semibold">Queen Bali</span><br>
+                            <span>Jl.XXX Telp. 00000</span> <br>
                             Telp. (0361) 945 887</span> </br>
                             <span>Email: queenbali@gmail.com</span>
                         </a>
                         <!-- Alamat 2 -->
-                        <a href="https://maps.google.com/?q=Jl. Hayam Wuruk, No. 226B, Denpasar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
-                            <h4 class="font-bold mb-2 text-sm">ALAMAT 2 :</h4>
-                            <span class="font-semibold">EZZY City</span><br>
-                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL DENPASAR</span><br>
-                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                         <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                            <h4 class="font-bold mb-2 text-sm">ALAMAT 1 :</h4>
+                            <span class="font-semibold">Queen Bali</span><br>
+                            <span>Jl.XXX Telp. 00000</span> <br>
                             Telp. (0361) 945 887</span> </br>
                             <span>Email: queenbali@gmail.com</span>
-
                         </a>
                         <!-- Alamat 3 -->
-                        <a href="https://maps.google.com/?q=Jl. By Pass I Gusti Ngurah Rai, No.27e, Nusa Dua, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
-                            <h4 class="font-bold mb-2 text-sm">ALAMAT 3 :</h4>
-                            <span class="font-semibold">EZZY Autograph</span><br>
-                            <span class="font-semibold">KAMPUS ELIZABETH INTERNATIONAL NUSA DUA</span><br>
-                            <span>Jl. Kebo Iwa, No. 12B, Gianyar, Bali - Indonesia
+                        <a href="https://maps.google.com/?q=Jl. Kebo Iwa, No. 12B, Gianyar, Bali" target="_blank" class="block hover:text-orange-400 transition text-center md:text-left">
+                            <h4 class="font-bold mb-2 text-sm">ALAMAT 1 :</h4>
+                            <span class="font-semibold">Queen Bali</span><br>
+                            <span>Jl.XXX Telp. 00000</span> <br>
                             Telp. (0361) 945 887</span> </br>
                             <span>Email: queenbali@gmail.com</span>
                         </a>
@@ -200,7 +197,7 @@
                 <p class="text-gray-400 text-sm">© 2025 queenbali.com All Rights Reserved Design by  <a href="https://www.indoapps.id/" style="text-decoration:underline; color:rgb(0, 119, 255);">Indoapps Solusindo</a></p>
             </div>
         </div>
-    </footer>
+</footer>
 
 
   

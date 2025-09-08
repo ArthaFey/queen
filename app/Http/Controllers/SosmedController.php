@@ -52,6 +52,7 @@ class SosmedController extends Controller
         $path = $request->file('image')->store('sosmed', 'public');
 
         Sosmed::create([
+            'nama' => $request->nama,
             'link' => $request->link,
             'color' => $request->color,
             'image' => $path,
@@ -95,6 +96,7 @@ class SosmedController extends Controller
         }
 
         $sosmed->update([
+            'nama' => $request->nama,
             'link' => $request->link,
             'color' => $request->color,
             'image' => $path,

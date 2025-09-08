@@ -32,6 +32,7 @@
                     <thead class="table-light">
                         <tr>
                             <th style="width: 10px">No</th>
+                            <th>Nama Media Sosial</th>
                             <th>Link</th>
                             <th>Image</th>
                             <th>Color</th>
@@ -42,6 +43,9 @@
                         @forelse($sosmeds as $key => $item)
                         <tr>
                             <td>{{ $sosmeds->firstItem() + $key }}.</td>
+                            <td>
+                                {{ $item->nama }}
+                            </td>
                             <td>
                                 <a href="{{ $item->link }}" target="_blank">{{ $item->link }}</a>
                             </td>

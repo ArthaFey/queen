@@ -11,9 +11,11 @@ use App\Http\Controllers\SosmedController;
 use Illuminate\Support\Facades\Cache;
 
 // =======================
-// HOMEPAGE
+// FRONTEND
 // =======================
 Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
+Route::get('/detail-program/{id}',[FrontEndController::class,'detailProgram'])->name('detail.program');
+Route::get('/queen-profile',[FrontEndController::class,'profileQueen'])->name('profile.queen');
 
 
 // =======================
