@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kegiatan;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class KegiatanController extends Controller
@@ -118,6 +119,7 @@ class KegiatanController extends Controller
             'image' => $path,
         ]);
 
+        Cache::forget('kegiatan_cache');
         return redirect()->route('kegiatan.index')->with('success', 'Kegiatan berhasil diperbarui!');
     }
 
@@ -135,6 +137,7 @@ class KegiatanController extends Controller
 
         // Hapus data dari database
         $kegiatan->delete();
+        Cache::forget('kegiatan_cache');
 
         return redirect()->route('kegiatan.index')->with('success', 'Kegiatan berhasil dihapus!');
     }

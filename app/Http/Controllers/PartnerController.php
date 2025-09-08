@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class PartnerController extends Controller
 {
@@ -85,6 +86,8 @@ class PartnerController extends Controller
 
         $partner->save();
 
+        Cache::forget('partner_cache');
+
         return redirect()
             ->route('partner.index')
             ->with('success', 'Partner berhasil diperbarui.');
@@ -97,6 +100,8 @@ class PartnerController extends Controller
     {
         $partner = Partner::findOrFail($id);
         $partner->delete();
+
+        Cache::forget('partner_cache');
 
         return redirect()
             ->route('partner.index')

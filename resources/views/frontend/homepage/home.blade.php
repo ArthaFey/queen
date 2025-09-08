@@ -116,7 +116,6 @@
     
     </section>
 
-
     
 
 
@@ -183,43 +182,13 @@
                     <div class="overflow-hidden relative">
                         <div class="flex partner-slide items-center" id="partnerSlider">
                             
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn1.jpg" class="h-20" alt="">
-                            </div>
-                          
-                           <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn2.png" class="h-20" alt="">
-                            </div>
-                            
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn3.jpg" class="h-20" alt="">
-                            </div>
+                            @foreach ($partner as  $part )                                
+                                <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
+                                    <img src="{{ asset('storage/'. $part['src']) }}" class="h-20" alt="">
+                                </div>
+                            @endforeach
 
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn4.jpg" class="h-20" alt="">
-                            </div>
-
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn5.png" class="h-20" alt="">
-                            </div>
-
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn6.jpeg" class="h-20" alt="">
-                            </div>
-                            
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn7.jpg" class="h-20" alt="">
-                            </div>
-
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn8.jpg" class="h-20" alt="">
-                            </div>
-
-                            <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                <img src="image/homepage/partner/pn9.jpg" class="h-20" alt="">
-                            </div>
-
-            
+                        
                            
                             
                         </div>
@@ -247,33 +216,21 @@
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">PROGRAM STUDY</h2>
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                @foreach ($program as $pro )
+                    
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="100">
-                    <img src="image/homepage/program/gambar2.jpeg" 
+                    <img src="{{ asset('storage/' . $pro['src']) }}" 
                          alt="Kapal Pesiar" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Kapal Pesiar</h3>
-                        <p class="text-gray-600 text-md mb-4">Perekrutan kapal pesiar di Queen International dilaksanakan secara profesional melalui tahapan seleksi yang terstruktur, dimulai dengan sesi wawancara untuk menilai kemampuan komunikasi, keterampilan, dan kesiapan kandidat bekerja di lingkungan internasional.</p>
-                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
+                        <h3 class="text-2xl font-bold mb-2">{{ $pro['alt'] }}</h3>
+                        <p class="text-gray-600 text-md mb-4">{!! Str::limit($pro['deskripsi'], 100, '...') !!}</p>
+                        <a href="" class="text-orange-500 font-semibold text-md hover:underline">Detail</a>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="200">
-                    <img src="image/homepage/program/gambar1.jpeg" 
-                         alt="Kuliah Keluar Negeri" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Kuliah Keluar Negeri</h3>
-                        <p class="text-gray-600 text-md mb-4">Program internship atau magang ke luar negeri Queen International dirancang sebagai kesempatan berharga bagi mahasiswa untuk memperoleh pengalaman kerja nyata di industri perhotelan dan kapal pesiar bertaraf internasional.</p>
-                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="300">
-                    <img src="image/homepage/banner/banner3.jpg" 
-                         alt="Perhotelan" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Perhotelan</h3>
-                        <p class="text-gray-600 text-md mb-4">Program kuliah Hospitality di Queen International dirancang untuk membekali mahasiswa dengan pengetahuan dan keterampilan komprehensif di industri perhotelan melalui kurikulum yang terfokus pada empat jurusan unggulan, yaitu Food & Beverage Product, Food & Beverage Service, Front Office, dan Housekeeping. </p>
-                        <!--<button class="text-orange-500 font-semibold text-md hover:underline">Detail</button>-->
-                    </div>
-                </div>
+        
+                @endforeach
+
             </div>
         </div>
     </section>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Banner;
 use App\Models\Kegiatan;
+use App\Models\Partner;
+use App\Models\Program;
 use App\Models\Sertifikat;
 use Illuminate\Http\Request;
 use Illuminate\Support\Benchmark;
@@ -35,7 +37,15 @@ class FrontEndController extends Controller
             });
 
 
+            $partner = Cache::remember('partner_cache', 3600, function () {
+                return Partner::all()->toArray();
+            });
 
-            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan'));
+            $program = Cache::remember('program_cache',3600,function(){
+                return Program::all()->toArray(); 
+            });
+
+
+            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan','partner','program'));
         }
 }

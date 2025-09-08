@@ -169,21 +169,7 @@
                 </a>
               </li>
 
-              <li class="nav-item">
-              <a href="{{ route('program.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-calendar-event"></i>
-                  <p>Program</p>
-              </a>
-          </li>
-
-          <li class="nav-item">
-              <a href="{{ route('kegiatan.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-calendar-event"></i>
-                  <p>Kegiatan</p>
-              </a>
-          </li>
-
-              <li class="nav-item">
+                <li class="nav-item">
                 <a href="{{ route('sertifikat.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
                     <p>Sertifikat</p>
@@ -191,12 +177,33 @@
             </li>
 
             <li class="nav-item">
+              <a href="{{ route('kegiatan.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-event"></i>
+                  <p>Kegiatan</p>
+              </a>
+          </li>
+
+           <li class="nav-item">
                 <a href="{{ route('partner.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
                     <p>Partner</p>
                 </a>
             </li>
 
+
+
+              <li class="nav-item">
+              <a href="{{ route('program.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-event"></i>
+                  <p>Program</p>
+              </a>
+          </li>
+
+          
+
+           
+
+           
 
                {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">

@@ -6,6 +6,7 @@ use App\Models\Program;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
 class ProgramController extends Controller
 {
@@ -79,6 +80,7 @@ class ProgramController extends Controller
             'deskripsi' => $request->deskripsi,
         ]);
 
+        Cache::forget('program_cache');
         return redirect()->route('program.index')->with('success', 'Program berhasil diperbarui!');
     }
 
@@ -91,6 +93,8 @@ class ProgramController extends Controller
         }
 
         $program->delete();
+
+        Cache::forget('program_cache');
 
         return redirect()->route('program.index')->with('success', 'Program berhasil dihapus!');
     }
