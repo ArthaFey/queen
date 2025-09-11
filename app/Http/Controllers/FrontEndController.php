@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
+use App\Models\Fasilitas;
 use App\Models\Kegiatan;
 use App\Models\Partner;
 use App\Models\Program;
@@ -56,7 +57,12 @@ class FrontEndController extends Controller
             });
 
 
-            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan','partner','program','testimoni','sosmed'));
+            $fasilitas = Cache::remember('fasilitas_cache', 3600,  function(){
+                return Fasilitas::all()->toArray();
+            });
+
+
+            return view('frontend.homepage.home',compact('banner','sertifikat','kegiatan','partner','program','testimoni','sosmed','fasilitas'));
         }
 
         public function detailProgram($id){
