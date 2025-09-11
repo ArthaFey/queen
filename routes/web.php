@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FrontEndController;
+use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
@@ -120,16 +121,16 @@ Route::delete('/testimoni/{id}', [\App\Http\Controllers\TestimoniController::cla
 // =======================
 Route::prefix('fasilitas')->name('fasilitas.')->group(function () {
     // Index
-    Route::get('/', [fasilitasController::class, 'index'])->name('index');
+    Route::get('/', [FasilitasController::class, 'index'])->name('index');
 
     // Tambah
-    Route::get('/create', [fasilitasController::class, 'create'])->name('create');
-    Route::post('/', [fasilitasController::class, 'store'])->name('store');
+    Route::get('/create', [FasilitasController::class, 'create'])->name('create');
+    Route::post('/', [FasilitasController::class, 'store'])->name('store');
 
     // Edit / Update
-    Route::get('/{id}/edit', [fasilitasController::class, 'edit'])->name('edit');
-    Route::put('/{id}', [fasilitasController::class, 'update'])->name('update');
+    Route::get('/{id}/edit', [FasilitasController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [FasilitasController::class, 'update'])->name('update');
 
     // Hapus
-    Route::delete('/{id}', [fasilitasController::class, 'destroy'])->name('destroy');
+    Route::delete('/{id}', [FasilitasController::class, 'destroy'])->name('destroy');
 });
