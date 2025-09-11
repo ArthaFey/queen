@@ -174,6 +174,19 @@
         <p>Kegiatan</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ route('partner.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-person-square"></i>
+        <p>Partner</p>
+    </a>
+</li>
+</li>
+<li class="nav-item">
+    <a href="{{ route('sertifikat.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-patch-check"></i>
+        <p>Sertifikat</p>
+    </a>
+</li>
 
                <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">

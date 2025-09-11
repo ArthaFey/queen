@@ -6,8 +6,7 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
-use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FasilitasController;
 // ## HOMEPAGE ## //
 Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
 
@@ -59,3 +58,22 @@ Route::prefix('partner')->group(function () {
     // Hapus
     Route::delete('/{id}/destroy', [PartnerController::class, 'destroy'])->name('partner.destroy');
 });
+// =======================
+// Fasilitas Routes
+// =======================
+Route::prefix('fasilitas')->name('fasilitas.')->group(function () {
+    // Index
+    Route::get('/', [fasilitasController::class, 'index'])->name('index');
+
+    // Tambah
+    Route::get('/create', [fasilitasController::class, 'create'])->name('create');
+    Route::post('/', [fasilitasController::class, 'store'])->name('store');
+
+    // Edit / Update
+    Route::get('/{id}/edit', [fasilitasController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [fasilitasController::class, 'update'])->name('update');
+
+    // Hapus
+    Route::delete('/{id}', [fasilitasController::class, 'destroy'])->name('destroy');
+});
+
