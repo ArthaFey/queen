@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class PartnerController extends Controller
 {
@@ -11,18 +12,18 @@ class PartnerController extends Controller
      * Tampilkan semua data partner.
      */
     public function index(Request $request)
-{
-    $search = $request->input('search');
+    {
+        $search = $request->input('search');
 
-    $partners = Partner::when($search, function ($query, $search) {
-            return $query->where('src', 'like', "%{$search}%");
-        })
-        ->orderBy('created_at', 'desc')
-        ->paginate(5) // jumlah data per halaman
-        ->appends($request->query()); // agar query search ikut di pagination
+        $partners = Partner::when($search, function ($query, $search) {
+                return $query->where('src', 'like', "%{$search}%");
+            })
+            ->orderBy('created_at', 'desc')
+            ->paginate(5) // jumlah data per halaman
+            ->appends($request->query()); // agar query search ikut di pagination
 
-    return view('backend.partner.index', compact('partners'));
-}
+        return view('backend.partner.index', compact('partners'));
+    }
 
 
     /**
@@ -85,6 +86,8 @@ class PartnerController extends Controller
 
         $partner->save();
 
+        Cache::forget('partner_cache');
+
         return redirect()
             ->route('partner.index')
             ->with('success', 'Partner berhasil diperbarui.');
@@ -97,6 +100,8 @@ class PartnerController extends Controller
     {
         $partner = Partner::findOrFail($id);
         $partner->delete();
+
+        Cache::forget('partner_cache');
 
         return redirect()
             ->route('partner.index')

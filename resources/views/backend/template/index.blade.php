@@ -25,9 +25,10 @@
       crossorigin="anonymous"
     />
     <!--end::Fonts-->
-    <!--begin::SweetAlert Plugin-->
+       <!--begin::SweetAlert Plugin-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--end::Fonts-->
+    @yield('scripts')
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
       rel="stylesheet"
@@ -45,7 +46,7 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
     <!--end::Required Plugin(AdminLTE)-->
     <!-- apexcharts -->
     <link
@@ -136,16 +137,16 @@
         <!--begin::Sidebar Brand-->
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
-          <a href="./index.html" class="brand-link">
+          <a href="{{ route('frontend.home') }}" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../../dist/assets/img/AdminLTELogo.png"
+              src="{{ asset('icon.png') }}"
               alt="AdminLTE Logo"
               class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
-            <span class="brand-text fw-light">AdminLTE 4</span>
+            
             <!--end::Brand Text-->
           </a>
           <!--end::Brand Link-->
@@ -161,12 +162,19 @@
               role="menu"
               data-accordion="false">
 
-             <li class="nav-item">
-    <a href="{{ route('banner') }}" class="nav-link">
-        <i class="nav-icon bi bi-palette"></i>
-        <p>Banner</p>
-    </a>
-</li>
+              <li class="nav-item">
+                <a href="{{ route('banners.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-event"></i>
+                  <p>Banner</p>
+                </a>
+              </li>
+
+                <li class="nav-item">
+                <a href="{{ route('sertifikat.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sertifikat & Achivment</p>
+                </a>
+            </li>
 
 <li class="nav-item">
     <a href="{{ route('kegiatan.index') }}" class="nav-link">
@@ -174,21 +182,50 @@
         <p>Kegiatan</p>
     </a>
 </li>
-<li class="nav-item">
-    <a href="{{ route('partner.index') }}" class="nav-link">
-        <i class="nav-icon bi bi-person-square"></i>
-        <p>Partner</p>
-    </a>
-</li>
-</li>
-<li class="nav-item">
-    <a href="{{ route('sertifikat.index') }}" class="nav-link">
-        <i class="nav-icon bi bi-patch-check"></i>
-        <p>Sertifikat</p>
-    </a>
-</li>
 
-               <li class="nav-item menu-open">
+           <li class="nav-item">
+                <a href="{{ route('partner.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Partner</p>
+                </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a href="{{ route('program.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-event"></i>
+                  <p>Program</p>
+              </a>
+          </li>
+          
+
+            <li class="nav-item">
+                <a href="{{ route('testimoni.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Testimoni</p>
+                </a>
+            </li>
+
+
+             <li class="nav-item">
+                <a href="{{ route('sosmed.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Sosial Media</p>
+                </a>
+            </li>
+           
+
+
+
+           
+
+          
+
+           
+
+           
+
+               {{-- <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
@@ -228,7 +265,7 @@
                     </a>
                   </li>
                 </ul>
-              </li>
+              </li> --}}
 
             </ul>
             <!--end::Sidebar Menu-->
@@ -239,11 +276,15 @@
       <!--end::Sidebar-->
 
 
+
+
       <!--begin::App Main-->
       <main class="app-main">
 
 
         @yield('content')
+
+
 
       </main>
       <!--end::App Main-->
@@ -512,9 +553,10 @@
       const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
       sparkline3.render();
     </script>
-    <!-- jQuery (dibutuhkan Summernote) -->
+    <!--end::Script-->
+  <!-- jQuery (dibutuhkan Summernote) -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<!-- Sweet Alert -->
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @yield('scripts')
 
@@ -525,7 +567,7 @@
 $(document).ready(function() {
     // Inisialisasi Summernote
       $('#deskripsi').summernote({
-          placeholder: 'Tulis deskripsi kegiatan di sini...',
+          placeholder: 'Tulis deskripsi di sini...',
           height: 250,
           toolbar: [
               ['style', ['bold','italic','underline','clear']],
@@ -552,7 +594,8 @@ $(document).ready(function() {
 </script>
 
 @yield('scripts')
-    <!--end::Script-->
+<!-- Sweet Alert -->
+
   </body>
   <!--end::Body-->
 </html>

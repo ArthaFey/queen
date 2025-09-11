@@ -67,7 +67,6 @@
             </div>
 
             <!-- Pagination -->
-            @if ($partners->hasPages())
             <div class="card-footer d-flex align-items-center bg-transparent border-0 p-3">
                 <div>
                     Menampilkan {{ $partners->firstItem() }}–{{ $partners->lastItem() }} dari {{ $partners->total() }} data
@@ -96,7 +95,7 @@
                     </ul>
                 </div>
             </div>
-            @endif
+        
         </div>
     </div>
 </div>
@@ -104,12 +103,13 @@
 {{-- SweetAlert sukses --}}
 @if(session('success'))
 <script>
-    Swal.fire({
-        title: "Berhasil!",
-        text: "{{ session('success') }}",
-        icon: "success",
-        confirmButtonText: "OK"
-    });
+        Swal.fire({
+            icon: "success",
+            title: "Berhasil",
+            text: "{{ session('success') }}",
+            showConfirmButton: false,
+            timer: 2000
+        });
 </script>
 @endif
 @endsection

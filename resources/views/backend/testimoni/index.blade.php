@@ -5,23 +5,23 @@
     <!-- Judul -->
     <div class="mb-3 mt-2">
         <h3 style="margin: 0 0 20px 6px; font-weight: normal; font-size: 1.4rem;">
-            Daftar Banner
+            Daftar Testimoni
         </h3>
     </div>
 
     <div class="card mt-2">
         <div class="card-header d-flex flex-wrap align-items-center gap-3">
             <!-- Tombol Tambah -->
-            <a href="{{ route('banners.create') }}" class="btn btn-primary btn-sm">
-                <i class="bi bi-plus-circle"></i> Tambah Banner
+            <a href="{{ route('testimoni.create') }}" class="btn btn-primary btn-sm">
+                <i class="bi bi-plus-circle"></i> Tambah Testimoni
             </a>
 
             <!-- Search -->
-            <form action="{{ route('banners.index') }}" method="GET" class="d-flex align-items-center gap-2 ms-auto">
+            <form action="{{ route('testimoni.index') }}" method="GET" class="d-flex align-items-center gap-2 ms-auto">
                 <label class="mb-0 d-flex align-items-center gap-2">
                     <span>Search:</span>
                     <input type="text" name="search" value="{{ request('search') }}"
-                        class="form-control" placeholder="Cari banner...">
+                        class="form-control" placeholder="Cari testimoni...">
                 </label>
             </form>
         </div>
@@ -34,20 +34,22 @@
                     <thead class="table-light">
                         <tr>
                             <th style="width: 10px">No</th>
-                            <th>Judul</th>
+                            <th>Nama</th>
+                            <th>Review</th>
                             <th>Gambar</th>
                             <th style="width: 150px" class="text-center">Aksi</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @forelse($banners as $key => $item)
+                        @forelse($testimonis as $key => $item)
                         <tr>
-                            <td>{{ $banners->firstItem() + $key }}.</td>
+                            <td>{{ $testimonis->firstItem() + $key }}.</td>
                             <td>{{ $item->alt }}</td>
+                            <td>{{ Str::limit($item->review, 50) }}</td>
                             <td>
                                 @if($item->src)
-                                <img src="{{ asset('uploads/banner/' . $item->src) }}"
+                                <img src="{{ asset('uploads/testimoni/' . $item->src) }}"
                                     alt="{{ $item->alt }}" width="100" class="rounded">
                                 @else
                                 <span class="text-muted">Tidak ada gambar</span>
@@ -56,10 +58,10 @@
 
                             <td>
                                 <div class="d-flex gap-2 justify-content-center">
-                                    <a href="{{ route('banners.edit', $item->id) }}" class="btn btn-sm btn-warning d-flex align-items-center gap-1">
+                                    <a href="{{ route('testimoni.edit', $item->id) }}" class="btn btn-sm btn-warning d-flex align-items-center gap-1">
                                         <i class="bi bi-pencil-square"></i> <span>Edit</span>
                                     </a>
-                                    <form action="{{ route('banners.destroy', $item->id) }}" method="POST" class="delete-form d-inline">
+                                    <form action="{{ route('testimoni.destroy', $item->id) }}" method="POST" class="delete-form d-inline">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger d-flex align-items-center gap-1 delete-btn">
@@ -71,7 +73,7 @@
                         </tr>
                         @empty
                         <tr>
-                            <td colspan="4" class="text-center py-4">Tidak ada data banner</td>
+                            <td colspan="5" class="text-center py-4">Tidak ada data testimoni</td>
                         </tr>
                         @endforelse
                     </tbody>
@@ -82,27 +84,27 @@
         <!-- Pagination -->
         <div class="card-footer d-flex align-items-center bg-transparent border-0 p-3">
             <div>
-                Menampilkan {{ $banners->firstItem() }}–{{ $banners->lastItem() }} dari {{ $banners->total() }} data
+                Menampilkan {{ $testimonis->firstItem() }}–{{ $testimonis->lastItem() }} dari {{ $testimonis->total() }} data
             </div>
-            
+
             <div style="margin-left:auto; margin-right:0;">
                 <ul class="pagination mb-0">
-                    @if ($banners->onFirstPage())
+                    @if ($testimonis->onFirstPage())
                         <li class="page-item disabled"><span class="page-link">Previous</span></li>
                     @else
-                        <li class="page-item"><a class="page-link" href="{{ $banners->previousPageUrl() }}">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="{{ $testimonis->previousPageUrl() }}">Previous</a></li>
                     @endif
 
-                    @foreach ($banners->getUrlRange(1, $banners->lastPage()) as $page => $url)
-                        @if ($page == $banners->currentPage())
+                    @foreach ($testimonis->getUrlRange(1, $testimonis->lastPage()) as $page => $url)
+                        @if ($page == $testimonis->currentPage())
                             <li class="page-item active"><span class="page-link">{{ $page }}</span></li>
                         @else
                             <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
                         @endif
                     @endforeach
 
-                    @if ($banners->hasMorePages())
-                        <li class="page-item"><a class="page-link" href="{{ $banners->nextPageUrl() }}">Next</a></li>
+                    @if ($testimonis->hasMorePages())
+                        <li class="page-item"><a class="page-link" href="{{ $testimonis->nextPageUrl() }}">Next</a></li>
                     @else
                         <li class="page-item disabled"><span class="page-link">Next</span></li>
                     @endif
