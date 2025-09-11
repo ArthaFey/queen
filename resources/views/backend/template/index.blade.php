@@ -176,12 +176,12 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-              <a href="{{ route('kegiatan.index') }}" class="nav-link">
-                  <i class="nav-icon bi bi-calendar-event"></i>
-                  <p>Kegiatan</p>
-              </a>
-          </li>
+<li class="nav-item">
+    <a href="{{ route('kegiatan.index') }}" class="nav-link">
+        <i class="nav-icon bi bi-calendar-event"></i>
+        <p>Kegiatan</p>
+    </a>
+</li>
 
            <li class="nav-item">
                 <a href="{{ route('partner.index') }}" class="nav-link">
@@ -207,6 +207,12 @@
             </li>
 
 
+             <li class="nav-item">
+                <a href="{{ route('fasilitas.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Fasilitas</p>
+                </a>
+            </li>
              <li class="nav-item">
                 <a href="{{ route('sosmed.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>

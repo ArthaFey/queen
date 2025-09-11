@@ -20,9 +20,8 @@
             <!-- Search -->
             <form action="{{ route('sertifikat.index') }}" method="GET" class="d-flex align-items-center gap-2 ms-auto">
                 <label class="mb-0 d-flex align-items-center gap-2">
-                    <span>Search:</span>
                     <input type="text" name="search" value="{{ request('search') }}" 
-                           class="form-control" placeholder="">
+                           class="form-control" placeholder="Search">
                 </label>
             </form>
         </div>
@@ -31,52 +30,57 @@
             <div class="p-3"></div>
 
             <div class="table-responsive">
-                <table class="table table-bordered table-striped table-hover align-middle mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Judul</th>
-                            <th>Gambar</th>
-                            <th style="width: 150px" class="text-center">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($sertifikats as $item)
-                        <tr>
-                            <td>{{ $item->alt }}</td>
-                            <td>
-                                <img src="{{ asset('storage/' . $item->src) }}" 
-                                     alt="{{ $item->alt }}" 
-                                     width="80" 
-                                     class="rounded">
-                            </td>
-                            <td>
-                                <div class="d-flex gap-2 justify-content-center">
-                                    <a href="{{ route('sertifikat.edit', $item->id) }}" 
-                                       class="btn btn-sm btn-warning d-flex align-items-center gap-1">
-                                        <i class="bi bi-pencil-square"></i> <span>Edit</span>
-                                    </a>
+    <table class="table table-bordered table-striped table-hover align-middle mb-0">
+        <thead class="table-light">
+            <tr>
+                <th style="width: 60px;" class="text-center">No</th> <!-- Tambahan kolom nomor -->
+                <th>Judul</th>
+                <th>Gambar</th>
+                <th style="width: 150px" class="text-center">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse ($sertifikats as $item)
+            <tr>
+                <td class="text-center">
+                    {{ $loop->iteration + ($sertifikats->currentPage() - 1) * $sertifikats->perPage() }}
+                </td>
+                <td>{{ $item->alt }}</td>
+                <td>
+                    <img src="{{ asset('storage/' . $item->src) }}" 
+                         alt="{{ $item->alt }}" 
+                         width="80" 
+                         class="rounded">
+                </td>
+                <td>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a href="{{ route('sertifikat.edit', $item->id) }}" 
+                           class="btn btn-sm btn-warning d-flex align-items-center gap-1">
+                            <i class="bi bi-pencil-square"></i> <span>Edit</span>
+                        </a>
 
-                                    <form action="{{ route('sertifikat.destroy', $item->id) }}" 
-                                          method="POST" 
-                                          class="delete-form d-inline">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" 
-                                                class="btn btn-sm btn-danger d-flex align-items-center gap-1 delete-btn">
-                                            <i class="bi bi-trash"></i> <span>Hapus</span>
-                                        </button>
-                                    </form>
-                                </div>
-                            </td>
-                        </tr>
-                        @empty
-                        <tr>
-                            <td colspan="3" class="text-center">Tidak ada data ditemukan</td>
-                        </tr>
-                        @endforelse
-                    </tbody>
-                </table>
-            </div>
+                        <form action="{{ route('sertifikat.destroy', $item->id) }}" 
+                              method="POST" 
+                              class="delete-form d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" 
+                                    class="btn btn-sm btn-danger d-flex align-items-center gap-1 delete-btn">
+                                <i class="bi bi-trash"></i> <span>Hapus</span>
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            @empty
+            <tr>
+                <td colspan="4" class="text-center">Tidak ada data ditemukan</td>
+            </tr>
+            @endforelse
+        </tbody>
+    </table>
+</div>
+
 
             <!-- Pagination -->
             <div class="card-footer d-flex align-items-center bg-transparent border-0 p-3">
