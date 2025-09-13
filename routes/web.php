@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FrontEndController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\SertifikatController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\SosmedController;
+use App\Models\Pendaftaran;
 use Illuminate\Support\Facades\Cache;
 
 // =======================
@@ -17,7 +19,24 @@ use Illuminate\Support\Facades\Cache;
 Route::get('/',[FrontEndController::class,'home'])->name('frontend.home');
 Route::get('/detail-program/{id}',[FrontEndController::class,'detailProgram'])->name('detail.program');
 Route::get('/queen-profile',[FrontEndController::class,'profileQueen'])->name('profile.queen');
+Route::get('/fasilitas-all',[FrontEndController::class,'fasilitas'])->name('allFasilitas');
+Route::get('/fasilitas-detail/{id}',[FrontEndController::class,'detailFasilitas'])->name('detailFasilitas');
+Route::get('/pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran.index');
+Route::post('/pendaftaran/insert',[PendaftaranController::class,'insert'])->name('pendaftaran.insert');
 
+Route::get('/login',[FrontEndController::class,'login'])->name('login');
+Route::post('/login-proses',[FrontEndController::class,'loginProses'])->name('login.proses');
+Route::get('/logout',[FrontEndController::class,'logout'])->name('logout');
+
+
+
+
+
+
+
+
+
+Route::middleware('auth')->group(function(){
 
 // =======================
 // KEGIATAN
@@ -134,3 +153,18 @@ Route::prefix('fasilitas')->name('fasilitas.')->group(function () {
     // Hapus
     Route::delete('/{id}', [FasilitasController::class, 'destroy'])->name('destroy');
 });
+
+
+// =======================
+// Pendaftaran Routes
+// =======================
+Route::prefix('pendaftaran')->name('pendaftaran.')->group(function () {
+
+    Route::get('/backend',[PendaftaranController::class,'indexBackend'])->name('index.backend');
+    Route::get('/detail/{id}',[PendaftaranController::class,'detail'])->name('detail');
+});
+
+
+});
+
+

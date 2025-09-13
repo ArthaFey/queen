@@ -12,6 +12,7 @@ use App\Models\Sosmed;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Support\Benchmark;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 
@@ -28,37 +29,37 @@ class FrontEndController extends Controller
 
             // PUT AND GET JIKA DATA YANG DI GET ADA 
             $banner = Cache::remember('banner_cache', 3600, function(){
-                return Banner::all()->toArray();
+                return Banner::all();
             });
 
             $sertifikat = Cache::remember('certificate_cache', 3600, function(){
-                return Sertifikat::all()->toArray();
+                return Sertifikat::all();
             });
 
             $kegiatan = Cache::remember('kegiatan_cache', 3600, function(){
-                return Kegiatan::all()->toArray();
+                return Kegiatan::all();
             });
 
             $partner = Cache::remember('partner_cache', 3600, function(){
-                return Partner::all()->toArray();
+                return Partner::all();
             });
 
             $program = Cache::remember('program_cache', 3600, function(){
-                return Program::all()->toArray();
+                return Program::all();
             });
 
             $testimoni = Cache::remember('testimoni_cache', 3600, function(){
-                return Testimoni::all()->toArray();
+                return Testimoni::all();
             });
 
 
              $sosmed = Cache::remember('sosmed_cache', 3600, function(){
-                return Sosmed::all()->toArray();
+                return Sosmed::all();
             });
 
 
             $fasilitas = Cache::remember('fasilitas_cache', 3600,  function(){
-                return Fasilitas::all()->toArray();
+                return Fasilitas::all();
             });
 
 
@@ -67,7 +68,7 @@ class FrontEndController extends Controller
 
         public function detailProgram($id){
             $program = Cache::remember('program_cache', 3600, function(){
-                return Program::all()->toArray();
+                return Program::all();
             });
 
         
@@ -76,7 +77,7 @@ class FrontEndController extends Controller
             });
             
             $banner = Cache::remember('banner_cache', 3600, function(){
-                return Banner::all()->toArray();
+                return Banner::all();
             });
 
             return view('frontend.homepage.program.detail',compact('program','detailProgram','banner'));
@@ -85,13 +86,78 @@ class FrontEndController extends Controller
 
         public function profileQueen(){
             $banner = Cache::remember('banner_cache', 3600, function(){
-                return Banner::all()->toArray();
+                return Banner::all();
             });
             
              $program = Cache::remember('program_cache', 3600, function(){
-                return Program::all()->toArray();
+                return Program::all();
             });
 
             return view('frontend.profile.index',compact('banner','program'));
+        }
+
+        
+        public function fasilitas(){
+            $program = Cache::remember('program_cache', 3600, function(){
+                return Program::all();
+            });
+
+            $fasilitas = Cache::remember('fasilitas_cache', 3600,  function(){
+                return Fasilitas::all();
+            });
+
+             $banner = Cache::remember('banner_cache', 3600, function(){
+                return Banner::all();
+            });
+
+            return view("frontend.fasilitas.index",compact('fasilitas','program','banner'));
+        }
+
+        public function detailFasilitas($id){
+            $program = Cache::remember('program_cache', 3600, function(){
+                return Program::all();
+            });
+
+            $fasilitas = Cache::remember("fasilitas_cache_detail_{$id}", 3600,  function() use ($id){
+                return Fasilitas::find($id);
+            });
+
+             $allFasilitas = Cache::remember('fasilitas_cache', 3600,  function() {
+                return Fasilitas::all();
+            });
+
+             $banner = Cache::remember('banner_cache', 3600, function(){
+                return Banner::all();
+            });
+
+            return view('frontend.fasilitas.detail.index',compact('program','fasilitas','banner','allFasilitas'));
+        }
+
+        public function login(){
+            return view('backend.auth.login');
+        }
+
+        public function loginProses(Request $request){
+            $credential = $request->validate([
+                'name' => ['required'],
+                'password' => ['required']  
+            ]);
+
+            if(Auth::attempt($credential)){
+                $request->session()->regenerate();
+                return redirect()->route('banner');
+            }
+
+            return back();
+        }
+
+        public function logout(Request $request){
+            Auth::logout();
+
+            $request->session()->invalidate();
+        
+            $request->session()->regenerateToken();
+        
+            return redirect('/login');
         }
 }

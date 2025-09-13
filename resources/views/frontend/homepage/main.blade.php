@@ -12,7 +12,7 @@
     <!-- Tambahkan Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/homepage/styles.css">
-    <link rel="icon" href="../image/homepage/icon.png">
+    <link rel="icon" href="{{ asset('icon.png') }}">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,8 +55,7 @@
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
                         <a href="{{ route('profile.queen') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Profile</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Preparation Class</a>
-                        <a href="#fasilitas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
+                        <a href="{{ route('allFasilitas') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">Fasilitas</a>
                     </div>
                 </div>
 
@@ -68,13 +67,13 @@
                     </button>
                     <div class="absolute left-0 top-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 bg-white rounded-lg shadow-lg w-44 py-2 z-50 border">
                        @foreach ($program as $data )                           
-                        <a href="{{ route('detail.program',$data['id']) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
+                        <a href="{{ route('detail.program',$data->id) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
                        @endforeach
 
                     </div>
                 </div>
 
-                <a href="pendaftaran.html" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
+                <a href="{{ route('pendaftaran.index') }}" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm transition-colors">Daftar Sekarang</a>
             </nav>
 
             <!-- Burger Menu (Mobile) -->
@@ -97,8 +96,7 @@
             </button>
             <div id="subTentangKami" class="hidden pl-4 space-y-1 text-sm">
                 <a href="{{ route('profile.queen') }}" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Profile</a>
-                <a href="#" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Preparation Class</a>
-                <a href="#fasilitas" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
+                <a href="{{ route('allFasilitas') }}" class="block text-gray-600 hover:text-orange-500 py-1 transition-colors">Fasilitas</a>
             </div>
 
             <!-- Program Mobile -->
@@ -108,11 +106,11 @@
             </button>
             <div id="subProgram" class="hidden pl-4 space-y-1 text-sm">
                 @foreach ($program as $dataMobile )                           
-                        <a href="{{ route('detail.program',$dataMobile['id']) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
+                        <a href="{{ route('detail.program',$dataMobile->id) }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-500 transition-colors">{{ $data['alt'] }}</a>
                 @endforeach
             </div>
 
-            <a href="pendaftaran.html" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
+            <a href="{{ route('pendaftaran.index') }}" class="block text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-full text-center w-max mt-4 transition-colors">Daftar Sekarang</a>
         </div>
     </header>
 

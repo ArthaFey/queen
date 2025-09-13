@@ -115,7 +115,7 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
                 <li class="user-footer">
-                  <a href="#" class="btn btn-default btn-flat float-end">Logout</a>
+                  <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-end">Logout</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
@@ -176,12 +176,12 @@
                 </a>
             </li>
 
-<li class="nav-item">
-    <a href="{{ route('kegiatan.index') }}" class="nav-link">
-        <i class="nav-icon bi bi-calendar-event"></i>
-        <p>Kegiatan</p>
-    </a>
-</li>
+            <li class="nav-item">
+                <a href="{{ route('kegiatan.index') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Kegiatan</p>
+                </a>
+            </li>
 
            <li class="nav-item">
                 <a href="{{ route('partner.index') }}" class="nav-link">
@@ -213,10 +213,21 @@
                     <p>Fasilitas</p>
                 </a>
             </li>
-             <li class="nav-item">
+            
+            
+            <li class="nav-item">
                 <a href="{{ route('sosmed.index') }}" class="nav-link">
                     <i class="nav-icon bi bi-calendar-event"></i>
                     <p>Sosial Media</p>
+                </a>
+            </li>
+
+
+
+            <li class="nav-item">
+                <a href="{{ route('pendaftaran.index.backend') }}" class="nav-link">
+                    <i class="nav-icon bi bi-calendar-event"></i>
+                    <p>Data Siswa</p>
                 </a>
             </li>
            

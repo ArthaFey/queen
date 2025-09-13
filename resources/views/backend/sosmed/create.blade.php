@@ -28,7 +28,7 @@
 
                  <div class="mb-3">
                     <label for="link" class="form-label">Nama Media Sosial</label>
-                    <input type="text" name="nama" class="form-control" 
+                    <input type="text" name="name" class="form-control" 
                           placeholder="Masukan Nama Media Sosial..." required>
                 </div>
 

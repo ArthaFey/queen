@@ -51,7 +51,7 @@
                     <div class="">
                         <div class="mb-4 sm:mb-6">
                             <div class="flex items-center">
-                                <img alt="" class=" mr-4 object-cover h-52" src="{{ asset('storage/'. $sert['src']) }}">
+                                <img alt="" class=" mr-4 object-cover h-52" src="{{ asset('storage/'. $sert->src) }}">
                             </div>
                         </div>
                     </div>
@@ -91,17 +91,17 @@
         <div class="activities-slider-container relative max-w-6xl mx-auto">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    @foreach (array_chunk($kegiatan, 6) as $chunk)
+                    @foreach ($kegiatan->chunk(6) as $chunk)
                         <div class="swiper-slide">
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 @foreach ($chunk as $ke)
                                     <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-lg overflow-hidden border border-white border-opacity-20 card-hover" data-aos="fade-up">
                                         <div class="h-40 sm:h-52 lg:h-56 bg-gray-200 bg-opacity-50">
-                                            <img src="{{ asset('storage/' . $ke['image']) }}" alt="{{ $ke['title'] }}" class="w-full h-full object-cover">
+                                            <img src="{{ asset('storage/' . $ke->image) }}" alt="{{ $ke->title }}" class="w-full h-full object-cover">
                                         </div>
                                         <div class="p-4 sm:p-6">
-                                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">{{ $ke['title'] }}</h3>
-                                            <p class="text-gray-700 text-sm leading-relaxed">{!! $ke['deskripsi'] !!}</p>
+                                            <h3 class="text-base sm:text-lg font-semibold mb-2 text-gray-800">{{ $ke->title }}</h3>
+                                            <p class="text-gray-700 text-sm leading-relaxed">{!! $ke->deskripsi !!}</p>
                                         </div>
                                     </div>
                                 @endforeach
@@ -184,7 +184,7 @@
                             
                             @foreach ($partner as  $part )                                
                                 <div class="flex-shrink-0 rounded flex items-center justify-center mx-4">
-                                    <img src="{{ asset('storage/'. $part['src']) }}" class="h-20" alt="">
+                                    <img src="{{ asset('storage/'. $part->src) }}" class="h-20" alt="">
                                 </div>
                             @endforeach
 
@@ -220,12 +220,12 @@
                 @foreach ($program as $pro )
                     
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="zoom-in-up" data-aos-delay="100">
-                    <img src="{{ asset('storage/' . $pro['src']) }}" 
+                    <img src="{{ asset('storage/' . $pro->src) }}" 
                          alt="Kapal Pesiar" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">{{ $pro['alt'] }}</h3>
-                        <p class="text-gray-600 text-md mb-4">{!! Str::limit($pro['deskripsi'], 100, '...') !!}</p>
-                        <a href="{{ route('detail.program',$pro['id']) }}" class="text-orange-500 font-semibold text-md hover:underline">Detail</a>
+                        <h3 class="text-2xl font-bold mb-2">{{ $pro->alt }}</h3>
+                        <p class="text-gray-600 text-md mb-4">{!! Str::limit($pro->deskripsi, 100, '...') !!}</p>
+                        <a href="{{ route('detail.program',$pro->id) }}" class="text-orange-500 font-semibold text-md hover:underline">Detail</a>
                     </div>
                 </div>
         
@@ -276,25 +276,11 @@
                                 <!-- Column 1 - Slide Up -->
                                 <div class="facility-slide-up">
                                     <div class="facility-column">
-                                        <!-- Duplicate images to make the column longer -->
-                                        <img src="image/homepage/fasilitas/gambar1.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar2.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar3.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar4.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-
-                                        <img src="image/homepage/fasilitas/gambar1.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar2.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar3.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar4.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-
+                                        
+                                        @foreach ($fasilitas as $data)    
+                                        <img src="{{ asset('storage/' . $data->image) }}" 
+                                        alt="Office" class="rounded w-full h-40 object-cover">
+                                        @endforeach
                                         
                                     </div>
                                 </div>
@@ -303,23 +289,10 @@
                                 <div class="facility-slide-down">
                                     <div class="facility-column">
                                         <!-- Duplicate images to make the column longer -->
-                                        <img src="image/homepage/fasilitas/gambar5.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar6.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar7.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar8.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-
-                                        <img src="image/homepage/fasilitas/gambar5.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar6.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar7.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar8.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                       @foreach ($fasilitas as $data)    
+                                        <img src="{{ asset('storage/' . $data->image) }}" 
+                                        alt="Office" class="rounded w-full h-40 object-cover">
+                                        @endforeach
                                     </div>
                                 </div>
                                 
@@ -327,23 +300,10 @@
                                 <div class="facility-slide-up">
                                     <div class="facility-column">
                                         <!-- Duplicate images to make the column longer -->
-                                        <img src="image/homepage/fasilitas/gambar9.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar10.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar11.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar12.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        
-                                        <img src="image/homepage/fasilitas/gambar9.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar10.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar11.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
-                                        <img src="image/homepage/fasilitas/gambar12.jpg" 
-                                            alt="Office" class="rounded w-full h-40 object-cover">
+                                        @foreach ($fasilitas as $data)    
+                                        <img src="{{ asset('storage/' . $data->image) }}" 
+                                        alt="Office" class="rounded w-full h-40 object-cover">
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -352,10 +312,6 @@
                 </div>
             </div>
     </section>
-
-
-
-
 
 
 
@@ -381,13 +337,13 @@
                     <div class="flex-shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 border">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-gray-300 rounded-full mr-4">
-                                <img src="{{ asset('uploads/testimoni/' . $test['src']) }}" class="w-12 h-12 object-cover rounded-full" alt="">
+                                <img src="{{ asset('uploads/testimoni/' . $test->src) }}" class="w-12 h-12 object-cover rounded-full" alt="">
                             </div>
                             <div>
-                                <h4 class="font-semibold">{{ $test['alt'] }}</h4>
+                                <h4 class="font-semibold">{{ $test->alt }}</h4>
                             </div>
                         </div>
-                        <p class="text-gray-600 text-sm">{{ $test['review'] }}</p>
+                        <p class="text-gray-600 text-sm">{{ $test->review }}</p>
                     </div>
                     @endforeach
 
@@ -419,9 +375,9 @@
                            
 
                             @foreach ($sosmed as $sos )
-                            <a href="{{ $sos['link'] }}" class="flex items-center p-3 bg-[{{ $sos['color'] }}] text-white rounded-lg"> 
-                                <img src="{{ asset('storage/'. $sos['image']) }}" alt="">
-                              <span class="ml-2 font-bold">{{ $sos['nama'] }}</span> 
+                            <a href="{{ $sos->link }}" class="flex items-center p-3 bg-[{{ $sos->color }}] text-white rounded-lg"> 
+                                <img src="{{ asset('storage/'. $sos->image) }}" alt="">
+                              <span class="ml-2 font-bold">{{ $sos->name }}</span> 
                             </a>
 
                          @endforeach

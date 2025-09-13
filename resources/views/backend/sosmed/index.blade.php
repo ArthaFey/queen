@@ -44,7 +44,7 @@
                         <tr>
                             <td>{{ $sosmeds->firstItem() + $key }}.</td>
                             <td>
-                                {{ $item->nama }}
+                                {{ $item->name }}
                             </td>
                             <td>
                                 <a href="{{ $item->link }}" target="_blank">{{ $item->link }}</a>

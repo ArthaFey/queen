@@ -21,7 +21,7 @@
 
 
     <div class="text-center mt-10">
-      <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white text-sm px-6 py-3 rounded-full font-semibold">
+      <a href="{{ route('pendaftaran.index') }}" class="bg-orange-500 hover:bg-orange-600 text-white text-sm px-6 py-3 rounded-full font-semibold">
         DAFTAR SEKARANG
       </a>
     </div>
