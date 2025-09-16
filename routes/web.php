@@ -32,10 +32,6 @@ Route::get('/logout',[FrontEndController::class,'logout'])->name('logout');
 
 
 
-
-
-
-
 Route::middleware('auth')->group(function(){
 
 // =======================
